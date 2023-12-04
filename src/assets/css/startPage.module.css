@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Vercetti-Regular';
+    src: url('../../public/fonts/Vercetti-Regular.woff2') format('woff2'),
+            url('../../public/fonts/Vercetti-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url('../images/saharaLandscape.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    color: white;
+    margin: 0;
+    height: 100vh;
+}
+
+.mainHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Vercetti-Regular', sans-serif;
+    font-size: 64px;
+}
+
+.customImg{
+    width: 200px;
+}
+
+.verticalCenter {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
