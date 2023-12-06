@@ -10,7 +10,8 @@ body {
     background-image: url('../images/saharaLandscape.jpg');
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    background-repeat: no-repeat;
+    background-color: #dfad72;
     color: white;
     margin: 0;
     height: 100vh;
@@ -24,15 +25,83 @@ body {
     font-size: 64px;
 }
 
-.customImg{
+.customImg {
     width: 200px;
+    transition: transform 0.3s ease-in-out;
+    animation: rotateLeftAndRight 7s infinite;
+  }
+  
+.delayedAnimation1{
+  animation-delay: 2s;
 }
 
-.verticalCenter {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+.delayedAnimation2{
+  animation-delay: 3s;
+}
+
+  .verticalCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40vh;
+}
+
+.customArrow{
+  color: white;
+  font-size: 48px;
+}
+
+.boucingIcon{
+  animation: bounce 2s infinite;
+}
+
+.bottomSection{
+  margin-top: 1800px;
+}
+
+.customColWidth{
+  min-width: 400px;
+}
+
+.fogEffect {
+  position: relative;
+  overflow: hidden;
+}
+
+.fogOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.5s ease; 
+  backdrop-filter: blur(5px);
+  z-index: 2;
+}
+
+@keyframes rotateLeftAndRight {
+  0%, 100% {
+    transform: rotate(0deg);
   }
+  25%, 75% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px); 
+  }
+  60% {
+    transform: translateY(-10px); 
+  }
+}
+
