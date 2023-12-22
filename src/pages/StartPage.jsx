@@ -2,6 +2,7 @@ import React from "react";
 import StartPageStyles from "../assets/css/StartPage.module.css";
 import curlyBracesImg from "../assets/images/curlyBraces.png";
 import angleBracketsImg from "../assets/images/angleBrackets.png";
+import profileImg from "../assets/images/profileImg.png";
 import hashtagImg from "../assets/images/hashtag.png";
 import { Link } from "react-scroll";
 import { ChevronCompactDown } from "react-bootstrap-icons";
@@ -10,12 +11,19 @@ import Stamps3D from "../components/Stamps3D";
 export default function StartPage() {
   return (
       <div>
+        <div className="row">
+          <div className={`${StartPageStyles.containerStyle} col-md-2`}>
+            <img src={profileImg} alt="Profile" className={`${StartPageStyles.profilePic}`}/>
+            <div className={`${StartPageStyles.greenCircleStyle}`}></div>
+          </div>
+          <div className="col-md-10"></div>
+        </div>
         <div className={`${StartPageStyles.verticalCenter}`}>
           <div className="row">
             <div
               className={`${StartPageStyles.mainHeader} col-md-12 text-center`}
             >
-              Frontend Developer
+              Fullstack Developer
             </div>
           </div>
           <div className="row ">
