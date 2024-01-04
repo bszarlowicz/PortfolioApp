@@ -30,88 +30,91 @@ export default function StartPage() {
           <div className={`${StartPageStyles.containerStyle} col-md-2`}>
             <img src={profileImg} alt="Profile" className={`${StartPageStyles.profilePic}`}/>
             <div className={`${StartPageStyles.greenCircleStyle}`}></div>
-          </div>
-          <div className="row">
-            <div className="col-md-2"></div>
-            <div
-              className={`${StartPageStyles.mainHeaderWelcome1} col-auto mx-3`}
-            >
-              Welcome,
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-2"></div>
-            <div
-              className={`${StartPageStyles.mainHeaderWelcome2} col-auto mx-3`}
-            >
-              I'm Bartosz Szarłowicz
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-2"></div>
-            <div
-              className={`${StartPageStyles.mainHeader} col-auto mx-3`}
-            >
-              Fullstack Developer
-              <Stamps3D
-                img={angleBracketsImg}
-                altText="Curly Braces"
-                customClassName={`${StartPageStyles.customImg} ${StartPageStyles.delayedAnimation2}`}
-              />
-            </div>
-          <div className="row">
-            <div className="col-md-2"></div>
-            <div
-              className={`${StartPageStyles.mainHeaderDescription} col `}
-            >
-              Dedicated web developer with six months of hands-on commercial experience. My journey in the world of web development began with a passion for clean and efficient code.
-            </div>
-            <div className="col-md-4"></div>
-          </div>
-          </div>
-          <div className="row mt-3 mx-2">
-            <ul>
-              <div className="row">
-                <div className="col-auto">
-                  <div onClick={() => handleCopyToClipboard('szarlowiczbartosz2311@gmail.com')} className={`${StartPageStyles.contact}`}>
-                    <ContactLine
-                      icon={EnvelopeAtFill}
-                      text="szarlowiczbartosz2311@gmail.com"
-                    />
+            <div className={`${StartPageStyles.spacing} row`}></div>
+            <div className="row mx-1">
+              <ul>
+                  <div className="row">
+                    <div className="col-auto">
+                      <div onClick={() => handleCopyToClipboard('szarlowiczbartosz2311@gmail.com')} className={`${StartPageStyles.contact}`}>
+                        <ContactLine
+                          icon={EnvelopeAtFill}
+                          text="szarlowiczbartosz2311@gmail.com"
+                        />
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-auto">
-                  <div onClick={() => handleCopyToClipboard('+48 506 492 177')} className={`${StartPageStyles.contact}`}>
-                    <ContactLine
-                      icon={TelephoneFill}
-                      text="+48 506 492 177"
-                    />
+                  <div className="row">
+                    <div className="col-auto">
+                      <div onClick={() => handleCopyToClipboard('+48 506 492 177')} className={`${StartPageStyles.contact}`}>
+                        <ContactLine
+                          icon={TelephoneFill}
+                          text="+48 506 492 177"
+                        />
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <div className="row">
+                    <div className="col-auto">
+                      <a href="https://www.linkedin.com/in/bartosz-szarlowicz/" target="_blank">
+                        <ContactLine
+                          icon={Linkedin}
+                          text="Linkedin"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-auto">
+                      <a href="https://github.com/bszarlowicz" target="_blank">
+                        <ContactLine
+                          icon={Github}
+                          text="Github"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </ul>
               </div>
-              <div className="row">
-                <div className="col-auto">
-                  <a href="https://www.linkedin.com/in/bartosz-szarlowicz/" target="_blank">
-                    <ContactLine
-                      icon={Linkedin}
-                      text="Linkedin"
-                    />
-                  </a>
-                </div>
+          </div>
+          <div className={`${StartPageStyles.welcomeTextSection} col-md-10`}>
+            <div className="row">
+              <div className="col-md-1"></div>
+              <div
+                className={`${StartPageStyles.mainHeaderWelcome1} col-auto mx-3`}
+              >
+                Welcome,
               </div>
-              <div className="row">
-                <div className="col-auto">
-                  <a href="https://github.com/bszarlowicz" target="_blank">
-                    <ContactLine
-                      icon={Github}
-                      text="Github"
-                    />
-                  </a>
-                </div>
+            </div>
+            <div className="row">
+              <div className="col-md-1"></div>
+              <div
+                className={`${StartPageStyles.mainHeaderWelcome2} col-auto mx-3`}
+              >
+                I'm Bartosz Szarłowicz
               </div>
-            </ul>
+            </div>
+            <div className="row">
+              <div className="col-md-1"></div>
+              <div
+                className={`${StartPageStyles.mainHeader} col-auto mx-3`}
+              >
+                Fullstack Developer
+                <Stamps3D
+                  img={angleBracketsImg}
+                  altText="Curly Braces"
+                  customClassName={`${StartPageStyles.customImg} ${StartPageStyles.delayedAnimation2}`}
+                />
+              </div>
+            <div className="row">
+              <div className="col-md-1"></div>
+              <div
+                className={`${StartPageStyles.mainHeaderDescription} col `}
+              >
+                I'm a dedicated web developer with six months of hands-on commercial experience. My journey in the world of web development began with a passion for clean and efficient code.
+              </div>
+              <div className="col-md-4"></div>
+            </div>
+            </div>
           </div>
         </div>
         <div className={`${StartPageStyles.verticalCenter}`}>
