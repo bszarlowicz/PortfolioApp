@@ -150,8 +150,8 @@ body {
 .contactIcon{
   color: #008c59;
   margin-top: 2px;
-  margin-right: 3px;
-
+  margin-right: 2px;
+  margin-left: 1px;
 }
 
 .contact{
