@@ -31,6 +31,44 @@ export default function StartPage() {
             <img src={profileImg} alt="Profile" className={`${StartPageStyles.profilePic}`}/>
             <div className={`${StartPageStyles.greenCircleStyle}`}></div>
           </div>
+          <div className="row">
+            <div className="col-md-2"></div>
+            <div
+              className={`${StartPageStyles.mainHeaderWelcome1} col-auto mx-3`}
+            >
+              Welcome,
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-2"></div>
+            <div
+              className={`${StartPageStyles.mainHeaderWelcome2} col-auto mx-3`}
+            >
+              I'm Bartosz Szarłowicz
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-2"></div>
+            <div
+              className={`${StartPageStyles.mainHeader} col-auto mx-3`}
+            >
+              Fullstack Developer
+              <Stamps3D
+                img={angleBracketsImg}
+                altText="Curly Braces"
+                customClassName={`${StartPageStyles.customImg} ${StartPageStyles.delayedAnimation2}`}
+              />
+            </div>
+          <div className="row">
+            <div className="col-md-2"></div>
+            <div
+              className={`${StartPageStyles.mainHeaderDescription} col `}
+            >
+              Dedicated web developer with six months of hands-on commercial experience. My journey in the world of web development began with a passion for clean and efficient code.
+            </div>
+            <div className="col-md-4"></div>
+          </div>
+          </div>
           <div className="row mt-3 mx-2">
             <ul>
               <div className="row">
@@ -77,30 +115,6 @@ export default function StartPage() {
           </div>
         </div>
         <div className={`${StartPageStyles.verticalCenter}`}>
-          <div className="row">
-            <div
-              className={`${StartPageStyles.mainHeader} col-md-12 text-center`}
-            >
-              Fullstack Developer
-            </div>
-          </div>
-          <div className="row ">
-              <Stamps3D
-                img={curlyBracesImg}
-                altText="Curly Braces"
-                customClassName={`${StartPageStyles.customImg}`}
-              />
-              <Stamps3D
-                img={hashtagImg}
-                altText="Curly Braces"
-                customClassName={`${StartPageStyles.customImg} ${StartPageStyles.delayedAnimation1}`}
-              />
-              <Stamps3D
-                img={angleBracketsImg}
-                altText="Curly Braces"
-                customClassName={`${StartPageStyles.customImg} ${StartPageStyles.delayedAnimation2}`}
-              />
-          </div>
           <div className="row mt-4">
             <div className="col-md-12 text-center">
               <Link
