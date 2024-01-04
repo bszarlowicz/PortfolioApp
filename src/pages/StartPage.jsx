@@ -35,22 +35,12 @@ export default function StartPage() {
               <ul>
                   <div className="row">
                     <div className="col-auto">
-                      <div onClick={() => handleCopyToClipboard('szarlowiczbartosz2311@gmail.com')} className={`${StartPageStyles.contact}`}>
+                      <a href="https://github.com/bszarlowicz" target="_blank">
                         <ContactLine
-                          icon={EnvelopeAtFill}
-                          text="szarlowiczbartosz2311@gmail.com"
+                          icon={Github}
+                          text="Github"
                         />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-auto">
-                      <div onClick={() => handleCopyToClipboard('+48 506 492 177')} className={`${StartPageStyles.contact}`}>
-                        <ContactLine
-                          icon={TelephoneFill}
-                          text="+48 506 492 177"
-                        />
-                      </div>
+                      </a>
                     </div>
                   </div>
                   <div className="row">
@@ -65,12 +55,22 @@ export default function StartPage() {
                   </div>
                   <div className="row">
                     <div className="col-auto">
-                      <a href="https://github.com/bszarlowicz" target="_blank">
+                      <div onClick={() => handleCopyToClipboard('+48 506 492 177')} className={`${StartPageStyles.contact}`}>
                         <ContactLine
-                          icon={Github}
-                          text="Github"
+                          icon={TelephoneFill}
+                          text="+48 506 492 177"
                         />
-                      </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-auto">
+                      <div onClick={() => handleCopyToClipboard('szarlowiczbartosz2311@gmail.com')} className={`${StartPageStyles.contact}`}>
+                        <ContactLine
+                          icon={EnvelopeAtFill}
+                          text="szarlowiczbartosz2311@gmail.com"
+                        />
+                      </div>
                     </div>
                   </div>
                 </ul>
