@@ -1,284 +1,298 @@
 @font-face {
-    font-family: 'Vercetti-Regular';
-    src: url('../../public/fonts/Vercetti-Regular.woff2') format('woff2'),
-            url('../../public/fonts/Vercetti-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-  font-family: 'Poppins-Bold';
-  src: url('../../public/fonts/Poppins-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lato-Light';
-  src: url('../../public/fonts/Lato-Light.ttf') format('truetype');
+  font-family: 'Vercetti-Regular';
+  src: url('../../public/fonts/Vercetti-Regular.woff2') format('woff2'),
+          url('../../public/fonts/Vercetti-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Lato-Regular';
-  src: url('../../public/fonts/Lato-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+font-family: 'Poppins-Bold';
+src: url('../../public/fonts/Poppins-Bold.ttf') format('truetype');
+font-weight: bold;
+font-style: normal;
 }
 
 @font-face {
-  font-family: 'Raleway-Light';
-  src: url('../../public/fonts/Raleway-Light.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+font-family: 'Lato-Light';
+src: url('../../public/fonts/Lato-Light.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Lato-Regular';
+src: url('../../public/fonts/Lato-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Raleway-Light';
+src: url('../../public/fonts/Raleway-Light.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
 }
 
 body {
-    background-image: url('../images/backgroundGreen.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #70cf95;
-    color: white;
-    margin: 0;
-    height: 100vh;
-    overflow-x: hidden;
+  background-image: url('../images/backgroundGreen.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #70cf95;
+  color: white;
+  margin: 0;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .welcomeTextSection{
-  margin-top: 15vh;
+margin-top: 15vh;
 }
 
 .mainHeader{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins-Bold', sans-serif;
-    font-size: 64px;
-    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation-delay: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins-Bold', sans-serif;
+  font-size: 64px;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation-delay: 1s;
 }
 
 .mainHeaderWelcome1{
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  font-family: 'Lato-Light', sans-serif;
-  font-size: 32px;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+display: flex;
+justify-content: start;
+align-items: center;
+font-family: 'Lato-Light', sans-serif;
+font-size: 32px;
+animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 .mainHeaderWelcome2{
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  font-family: 'Lato-Light', sans-serif;
-  font-size: 24px;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-  animation-delay: 0.5s;
+display: flex;
+justify-content: start;
+align-items: center;
+font-family: 'Lato-Light', sans-serif;
+font-size: 24px;
+animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+animation-delay: 0.5s;
 }
 
 .mainHeaderDescription{
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  font-family: 'Lato-Light', sans-serif;
-  font-size: 14px;
-  margin-left: 20px;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation-delay: 1.2s;
+display: flex;
+justify-content: start;
+align-items: center;
+font-family: 'Lato-Light', sans-serif;
+font-size: 14px;
+margin-left: 20px;
+animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+animation-delay: 1.2s;
 }
 
 .customImg {
-    width: 130px;
-  }
+  width: 130px;
+}
 
 .customArrow{
-  color: white;
-  font-size: 48px;
+color: white;
+font-size: 48px;
 }
 
 .bouncingIcon{
-  animation: bounce 2s infinite;
-  cursor: pointer;
+animation: bounce 2s infinite;
+cursor: pointer;
 }
 
 .arrrowDescription{
-  text-decoration: none;
-  font-size: 15px;
-  cursor: pointer;
-  font-family: 'Lato-Light', sans-serif;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation-delay: 2.1s;
+text-decoration: none;
+font-size: 15px;
+cursor: pointer;
+font-family: 'Lato-Light', sans-serif;
+animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation-delay: 2.1s;
 }
 
 
 .bottomSection{
-  margin-top: 55vh;
-  margin-bottom: 50vh;
+margin-top: 55vh;
+margin-bottom: 50vh;
 }
 
 .customColWidth{
-  min-width: 400px;
+min-width: 400px;
 }
 
 .containerStyle{
-  position: relative;
-  display: inline-block;
-  max-width: 125px;
+position: relative;
+display: inline-block;
+max-width: 125px;
 }
 
 .greenCircleStyle {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: #39cc39;
-  border: 2px solid #efefef;
-  border-radius: 50%;
-  left: 80%;
-  margin-top: -25px;
-  animation: pulseAnimation 1.5s infinite;
+position: absolute;
+width: 15px;
+height: 15px;
+background-color: #39cc39;
+border: 2px solid #efefef;
+border-radius: 50%;
+left: 80%;
+margin-top: -25px;
+animation: pulseAnimation 1.5s infinite;
 }
 
 .spacing{
-  height: 24vh;
+height: 24vh;
 }
 
 .profilePic{
-  width: 100px;
-  height: 100px;
-  border-radius: 41% 59% 54% 46% / 36% 48% 52% 64%;
-  margin-left: 10px;
+width: 100px;
+height: 100px;
+border-radius: 41% 59% 54% 46% / 36% 48% 52% 64%;
+margin-left: 10px;
 }
 
 .contactIcon{
-  color: #008c59;
-  margin-top: 2px;
-  margin-right: 2px;
-  margin-left: 1px;
+color: #008c59;
+margin-top: 2px;
+margin-right: 2px;
+margin-left: 1px;
 }
 
 .contact{
-  cursor: pointer;
+cursor: pointer;
 }
 
 li.contacts {
-  overflow: hidden;
-  background: #c3debe;
-  list-style: none;
-  white-space:nowrap;
-  margin-right: 10px;
-  border-radius: 25px;
-  display: inline-block;
+overflow: hidden;
+background: #c3debe;
+list-style: none;
+white-space:nowrap;
+margin-right: 10px;
+border-radius: 25px;
+display: inline-block;
 }
 
 li.contacts span {
-  opacity: 0;
-  color: #008c59;
-  max-width: 0;
-  display: inline-block;
-  text-decoration: none;
-  transition: max-width 1s ease-out .1s, opacity 1s ease-out .1s, color;
+opacity: 0;
+color: #008c59;
+max-width: 0;
+display: inline-block;
+text-decoration: none;
+transition: max-width 1s ease-out .1s, opacity 1s ease-out .1s, color;
 }
 
 li.contacts span:hover {
-    color: #008c59;
+  color: #008c59;
 }
 
 li.contacts span i {
-  float:right;
-  display: block;
-  padding-right: 1em;
-  font:1em/1 'Vercetti-Regular', sans-serif;
-  font-size: 13px;
+float:right;
+display: block;
+padding-right: 1em;
+font:1em/1 'Vercetti-Regular', sans-serif;
+font-size: 13px;
 }
 
 li.contacts b {
-  line-height: 1;
-  font-size: 20px;
-  display: inline-block;
-  padding: 5px 7px;
-  margin-bottom: 2px;
+line-height: 1;
+font-size: 20px;
+display: inline-block;
+padding: 5px 7px;
+margin-bottom: 2px;
 }
 
 li.contacts:hover span {
-    opacity: 1;
-    max-width: 300px;
-    transition: max-width 1s ease-out .1s, opacity 1s ease-out .1s, color .2s;
+  opacity: 1;
+  max-width: 300px;
+  transition: max-width 1s ease-out .1s, opacity 1s ease-out .1s, color .2s;
 }
 
 .trichologistPic{
-  width: 65%;
-  aspect-ratio: 16 / 9;
+width: 90%;
+aspect-ratio: 16 / 9;
 }
 
 .greenDotProjects{
-  background-color: #008c59;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-left: 15px;
+background-color: #008c59;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-left: 15px;
 }
 
 .trichologistTitle{
-  font-family: 'Poppins-Bold', sans-serif;
-  font-size: 35px;
+font-family: 'Poppins-Bold', sans-serif;
+font-size: 35px;
 }
 
 .trichologistSubTitle{
-  font-family: 'Lato-Light', sans-serif;
-  font-size: 15px;
-  margin-left: 10px;
+font-family: 'Lato-Light', sans-serif;
+font-size: 15px;
+margin-left: 10px;
+}
+
+.trichologistDescriptionTitle{
+text-align: center;
+padding-right: 15vw;
+padding-top: 1vh;
+font-family: 'Lato-Light', sans-serif;
+font-size: 30px;
+}
+
+.trichologistDescriptionIcon{
+width: 40px;
+height: 40px;
+margin: 10px 0px;
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px); 
-  }
-  60% {
-    transform: translateY(-10px); 
-  }
+0%, 20%, 50%, 80%, 100% {
+  transform: translateY(0);
+}
+40% {
+  transform: translateY(-20px); 
+}
+60% {
+  transform: translateY(-10px); 
+}
 }
 
 @keyframes pulseAnimation {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
+0% {
+  transform: scale(1);
+  opacity: 0.8;
+}
+50% {
+  transform: scale(1.2);
+  opacity: 1;
+}
+100% {
+  transform: scale(1);
+  opacity: 0.8;
+}
 }
 
 @keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
+0% {
+  letter-spacing: -0.5em;
+  opacity: 0;
+}
+40% {
+  opacity: 0.6;
+}
+100% {
+  opacity: 1;
+}
 }
 
 @keyframes text-focus-in {
-  0% {
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    filter: blur(0px);
-    opacity: 1;
-  }
+0% {
+  filter: blur(12px);
+  opacity: 0;
+}
+100% {
+  filter: blur(0px);
+  opacity: 1;
+}
 }

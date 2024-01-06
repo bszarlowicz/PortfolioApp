@@ -5,6 +5,13 @@ import angleBracketsImg from "../assets/images/angleBrackets.png";
 import profileImg from "../assets/images/profileImg.png";
 import hashtagImg from "../assets/images/hashtag.png";
 import trichologist_final from "../assets/images/trycholog_final.png";
+import railsLogo from "../assets/images/RailsIcon.png";
+import rubyLogo from "../assets/images/rubyIcon.png";
+import jsLogo from "../assets/images/jsLogo.png";
+import cssLogo from "../assets/images/cssIcon.png";
+import htmlLogo from "../assets/images/htmlIcon.png";
+import sqlLiteLogo from "../assets/images/sqlLite.png";
+import bootstrapLogo from "../assets/images/bootstrapIcon.png";
 import { Link } from "react-scroll";
 import { ChevronCompactDown } from "react-bootstrap-icons";
 import { EnvelopeAtFill } from "react-bootstrap-icons";
@@ -29,11 +36,11 @@ export default function StartPage() {
   return (
       <div>
         <div className="row mt-2">
-          <div className={`${StartPageStyles.containerStyle} col-md-2`}>
+          <div className={`${StartPageStyles.containerStyle}`}>
             <img src={profileImg} alt="Profile" className={`${StartPageStyles.profilePic}`}/>
             <div className={`${StartPageStyles.greenCircleStyle}`}></div>
             <div className={`${StartPageStyles.spacing} row`}></div>
-            <div className="row mx-1">
+            <div className="row mx-2">
               <ul>
                   <div className="row">
                     <div className="col-auto">
@@ -152,10 +159,63 @@ export default function StartPage() {
             </div>
           </div>
           <div className="row">
-            <ProjectPicture 
-              src={trichologist_final}
-              customClassName={`${StartPageStyles.trichologistPic}`}
-            />
+            <div className="col-md-8">
+              <ProjectPicture 
+                src={trichologist_final}
+                customClassName={`${StartPageStyles.trichologistPic}`}
+              />
+            </div>
+            <div className={`${StartPageStyles.trichologistDescriptionTitle} col-md-4`}>
+              <div className="row">
+                <div className="col-md-12">
+                  Technologies
+                </div>
+              </div>
+              <div className="row">
+                <div className="col">
+                  <img
+                    src={railsLogo}
+                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    src={rubyLogo}
+                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    src={sqlLiteLogo}
+                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    src={bootstrapLogo}
+                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    src={jsLogo}
+                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    src={htmlLogo}
+                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    src={cssLogo}
+                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
