@@ -61,33 +61,33 @@ margin-top: 15vh;
 }
 
 .mainHeaderWelcome1{
-display: flex;
-justify-content: start;
-align-items: center;
-font-family: 'Lato-Light', sans-serif;
-font-size: 32px;
-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-family: 'Lato-Light', sans-serif;
+  font-size: 32px;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 .mainHeaderWelcome2{
-display: flex;
-justify-content: start;
-align-items: center;
-font-family: 'Lato-Light', sans-serif;
-font-size: 24px;
-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-animation-delay: 0.5s;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-family: 'Lato-Light', sans-serif;
+  font-size: 24px;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation-delay: 0.5s;
 }
 
 .mainHeaderDescription{
-display: flex;
-justify-content: start;
-align-items: center;
-font-family: 'Lato-Light', sans-serif;
-font-size: 14px;
-margin-left: 20px;
-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-animation-delay: 1.2s;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-family: 'Lato-Light', sans-serif;
+  font-size: 14px;
+  margin-left: 20px;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation-delay: 1.2s;
 }
 
 .customImg {
@@ -95,8 +95,8 @@ animation-delay: 1.2s;
 }
 
 .customArrow{
-color: white;
-font-size: 48px;
+  color: white;
+  font-size: 48px;
 }
 
 .bouncingIcon{
@@ -116,7 +116,7 @@ animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
 
 .bottomSection{
 margin-top: 55vh;
-margin-bottom: 50vh;
+margin-bottom: 10vh;
 }
 
 .customColWidth{
@@ -214,11 +214,17 @@ aspect-ratio: 16 / 9;
 }
 
 .greenDotProjects{
-background-color: #008c59;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-margin-left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 15px;
+  background: linear-gradient(45deg, 
+    #008c59 0%,   /* Zwiększone stopnie dla koloru #008c59 */
+    #47b278 30%, 
+    #70cf95 50%, 
+    #a2d8a6 75%, 
+    #c3debe 100%
+);
 }
 
 .trichologistTitle{
@@ -241,9 +247,21 @@ font-size: 30px;
 }
 
 .trichologistDescriptionIcon{
-width: 40px;
-height: 40px;
+width: 45px;
+height: 45px;
 margin: 10px 0px;
+}
+
+.mainPageFooter{
+  background-color: #008c59;
+  height: 30px;
+}
+
+.mainPageFooterText{
+  color: #a2d8a6;
+  text-decoration: none;
+  font-family: 'Lato-Light', sans-serif;
+  font-size: 14px;
 }
 
 @keyframes bounce {

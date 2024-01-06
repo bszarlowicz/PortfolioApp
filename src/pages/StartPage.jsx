@@ -5,12 +5,12 @@ import angleBracketsImg from "../assets/images/angleBrackets.png";
 import profileImg from "../assets/images/profileImg.png";
 import hashtagImg from "../assets/images/hashtag.png";
 import trichologist_final from "../assets/images/trycholog_final.png";
-import railsLogo from "../assets/images/RailsIcon.png";
+import railsLogo from "../assets/images/railsIcon.png";
 import rubyLogo from "../assets/images/rubyIcon.png";
-import jsLogo from "../assets/images/jsLogo.png";
+import jsLogo from "../assets/images/javascriptIcon.png";
 import cssLogo from "../assets/images/cssIcon.png";
 import htmlLogo from "../assets/images/htmlIcon.png";
-import sqlLiteLogo from "../assets/images/sqlLite.png";
+import sqlLiteLogo from "../assets/images/mySqlIcon.png";
 import bootstrapLogo from "../assets/images/bootstrapIcon.png";
 import { Link } from "react-scroll";
 import { ChevronCompactDown } from "react-bootstrap-icons";
@@ -186,7 +186,13 @@ export default function StartPage() {
                 </div>
                 <div className="col">
                   <img
-                    src={sqlLiteLogo}
+                    src={htmlLogo}
+                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    src={cssLogo}
                     className={`${StartPageStyles.trichologistDescriptionIcon}`}
                   />
                 </div>
@@ -198,19 +204,13 @@ export default function StartPage() {
                 </div>
                 <div className="col">
                   <img
+                    src={sqlLiteLogo}
+                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                  />
+                </div>
+                <div className="col">
+                  <img
                     src={jsLogo}
-                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                  />
-                </div>
-                <div className="col">
-                  <img
-                    src={htmlLogo}
-                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                  />
-                </div>
-                <div className="col">
-                  <img
-                    src={cssLogo}
                     className={`${StartPageStyles.trichologistDescriptionIcon}`}
                   />
                 </div>
@@ -218,6 +218,9 @@ export default function StartPage() {
             </div>
           </div>
         </div>
+        <footer className={`${StartPageStyles.mainPageFooter} w-100 text-center`}>
+          <a target="_blank" href="https://icons8.com" className={`${StartPageStyles.mainPageFooterText}`}>Icons by Icons8</a>
+        </footer>
       </div>
     );
 }
