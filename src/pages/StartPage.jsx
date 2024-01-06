@@ -4,6 +4,7 @@ import curlyBracesImg from "../assets/images/curlyBraces.png";
 import angleBracketsImg from "../assets/images/angleBrackets.png";
 import profileImg from "../assets/images/profileImg.png";
 import hashtagImg from "../assets/images/hashtag.png";
+import trichologist_final from "../assets/images/trycholog_final.png";
 import { Link } from "react-scroll";
 import { ChevronCompactDown } from "react-bootstrap-icons";
 import { EnvelopeAtFill } from "react-bootstrap-icons";
@@ -12,6 +13,7 @@ import { TelephoneFill } from "react-bootstrap-icons";
 import { Github } from "react-bootstrap-icons";
 import Stamps3D from "../components/Stamps3D";
 import ContactLine from "../components/ContactLine";
+import ProjectPicture from "../components/ProjectPicture";
 
 export default function StartPage() {
   const handleCopyToClipboard = (text) => {
@@ -117,23 +119,44 @@ export default function StartPage() {
             </div>
           </div>
         </div>
-        <div className={`${StartPageStyles.verticalCenter}`}>
-          <div className="row mt-4">
-            <div className="col-md-12 text-center">
-              <Link
-                to="MyProjects"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className={`${StartPageStyles.customArrow}`}
-              >
-                <ChevronCompactDown
-                  className={`${StartPageStyles.boucingIcon}`}
-                />
-              </Link>
+        <div className="row mt-4">
+          <div className="col-md-12 text-center">
+            <Link
+              to="MyProjects"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <ChevronCompactDown
+                className={`${StartPageStyles.bouncingIcon} ${StartPageStyles.customArrow}`}
+              />
+              <div className="row">
+                <div className="col-md-12">
+                  <span className={`${StartPageStyles.arrrowDescription}`}>Check out my work</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+        <div  id="MyProjects"className={`${StartPageStyles.bottomSection}`}>
+          <div className="row mx-5">
+            <div className={`${StartPageStyles.greenDotProjects} col-1`}></div>
+            <div className={`${StartPageStyles.trichologistTitle} col-auto`}>
+              Trichologist app
             </div>
           </div>
-          <div  id="MyProjects"className={`${StartPageStyles.bottomSection}`}></div>
+          <div className="row">
+            <div className="col-1"></div>
+            <div className={`${StartPageStyles.trichologistSubTitle} col-auto`}>
+              Users data - collection/processing/export
+            </div>
+          </div>
+          <div className="row">
+            <ProjectPicture 
+              src={trichologist_final}
+              customClassName={`${StartPageStyles.trichologistPic}`}
+            />
+          </div>
         </div>
       </div>
     );
