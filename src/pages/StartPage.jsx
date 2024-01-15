@@ -145,7 +145,7 @@ export default function StartPage() {
             </Link>
           </div>
         </div>
-        <div  id="MyProjects"className={`${StartPageStyles.bottomSection}`}>
+        <div  id="MyProjects" className={`${StartPageStyles.bottomSection}`}>
           <div className="row mx-5">
             <div className={`${StartPageStyles.greenDotProjects} col-1`}></div>
             <div className={`${StartPageStyles.trichologistTitle} col-auto`}>
@@ -165,59 +165,66 @@ export default function StartPage() {
                 customClassName={`${StartPageStyles.trichologistPic}`}
               />
             </div>
-            <div className={`${StartPageStyles.trichologistDescriptionTitle} col-md-4`}>
-              <div className="row">
-                <div className="col-md-12">
-                  Technologies
+            <div className={`${StartPageStyles.trichologistDescriptionTitle} col-md-4 my-auto`}>
+              <div className={`${StartPageStyles.iconContainer}`}>
+
+                <div className="row">
+                  <div className="col-md-12">
+                    Technologies
+                  </div>
                 </div>
-              </div>
-              <div className="row">
-                <div className="col">
-                  <img
-                    src={railsLogo}
-                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                  />
-                </div>
-                <div className="col">
-                  <img
-                    src={rubyLogo}
-                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                  />
-                </div>
-                <div className="col">
-                  <img
-                    src={htmlLogo}
-                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                  />
-                </div>
-                <div className="col">
-                  <img
-                    src={cssLogo}
-                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                  />
-                </div>
-                <div className="col">
-                  <img
-                    src={bootstrapLogo}
-                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                  />
-                </div>
-                <div className="col">
-                  <img
-                    src={sqlLiteLogo}
-                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                  />
-                </div>
-                <div className="col">
-                  <img
-                    src={jsLogo}
-                    className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                  />
+                <div className="row">
+                  <div className="col-3">
+                    <img
+                      src={railsLogo}
+                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                    />
+                  </div>
+                  <div className="col-3">
+                    <img
+                      src={rubyLogo}
+                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                    />
+                  </div>
+                  <div className="col-3">
+                    <img
+                      src={htmlLogo}
+                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                    />
+                  </div>
+                  <div className="col-3">
+                    <img
+                      src={cssLogo}
+                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                    />
+                  </div>
+                  <div className="col">
+                    <img
+                      src={bootstrapLogo}
+                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                    />
+                  </div>
+                  <div className="col">
+                    <img
+                      src={sqlLiteLogo}
+                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                    />
+                  </div>
+                  <div className="col">
+                    <img
+                      src={jsLogo}
+                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
+                    />
+                  </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
         </div>
+        <div  id="MyProjects" className={`${StartPageStyles.trichologistDescriptionTextArea}`}>
+
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#47b278" fill-opacity="1" d="M0,256L40,256C80,256,160,256,240,245.3C320,235,400,213,480,181.3C560,149,640,107,720,128C800,149,880,235,960,234.7C1040,235,1120,149,1200,133.3C1280,117,1360,171,1400,197.3L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
         <footer className={`${StartPageStyles.mainPageFooter} w-100 text-center`}>
           <a target="_blank" href="https://icons8.com" className={`${StartPageStyles.mainPageFooterText}`}>Icons by Icons8</a>
         </footer>
