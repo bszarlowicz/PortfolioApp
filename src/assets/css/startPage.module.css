@@ -270,7 +270,7 @@ margin-left: 10px;
 }
 
 .iconContainer{
-  background: linear-gradient(to top right, #47b278, #70cf95, #a2d8a6, #c3debe);
+  background: linear-gradient(to top right, #a2d8a6, #70cf95, #70cf95, #a2d8a6, #c3debe);
   border-radius: 12px;
   margin-bottom: 20vh;
   color: #008c59;
