@@ -21,6 +21,7 @@ import { Github } from "react-bootstrap-icons";
 import Stamps3D from "../components/Stamps3D";
 import ContactLine from "../components/ContactLine";
 import ProjectPicture from "../components/ProjectPicture";
+import ProjectTitle from "../components/ProjectTitle";
 
 export default function StartPage() {
   const handleCopyToClipboard = (text) => {
@@ -146,18 +147,10 @@ export default function StartPage() {
           </div>
         </div>
         <div  id="MyProjects" className={`${StartPageStyles.bottomSection}`}>
-          <div className="row mx-5">
-            <div className={`${StartPageStyles.greenDotProjects} col-1`}></div>
-            <div className={`${StartPageStyles.trichologistTitle} col-auto`}>
-              Trichologist app
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-1"></div>
-            <div className={`${StartPageStyles.trichologistSubTitle} col-auto`}>
-              Users data - collection/processing/export
-            </div>
-          </div>
+          <ProjectTitle
+            projectName= "Trichologist app"
+            projectShortDescription= "Users data - collection/processing/export"
+          />
           <div className="row">
             <div className="col-md-8">
               <ProjectPicture 
@@ -165,9 +158,8 @@ export default function StartPage() {
                 customClassName={`${StartPageStyles.trichologistPic}`}
               />
             </div>
-            <div className={`${StartPageStyles.trichologistDescriptionTitle} col-md-4 my-auto`}>
+            <div className={`${StartPageStyles.trichologistIconArea} col-md-4 my-auto`}>
               <div className={`${StartPageStyles.iconContainer}`}>
-
                 <div className="row">
                   <div className="col-md-12">
                     Technologies
@@ -216,15 +208,34 @@ export default function StartPage() {
                       className={`${StartPageStyles.trichologistDescriptionIcon}`}
                     />
                   </div>
-                  </div>
+                </div>
                 </div>
               </div>
             </div>
         </div>
-        <div  id="MyProjects" className={`${StartPageStyles.trichologistDescriptionTextArea}`}>
-
+        <div className={`${StartPageStyles.mainDescriptionArea} row px-5`}>
+          <div className="col-md-6 px-5">
+            <div className="row">
+              About
+            </div>
+            <div className="row">
+              <div className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+                <p>I was a member of the development team that focused on building an application based on Ruby on Rails technology. Our application was designed with the aim of facilitating research and efficiently collecting diverse data, including tracking user activity on the website.</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-6 px-5">
+            <div className="row">
+              Goal
+            </div>
+            <div className="row">
+              <div className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+                <p>We emphasized delivering innovative solutions that not only provided a clear user interface but also a functional admin panel, offering full control over the data. Our goal was to make our application not only technologically advanced but also user-friendly, meeting expectations, and providing convenient data management tools.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#47b278" fill-opacity="1" d="M0,256L40,256C80,256,160,256,240,245.3C320,235,400,213,480,181.3C560,149,640,107,720,128C800,149,880,235,960,234.7C1040,235,1120,149,1200,133.3C1280,117,1360,171,1400,197.3L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+        <div className={`${StartPageStyles.mainDescriptionAreaEnd}`}></div>
         <footer className={`${StartPageStyles.mainPageFooter} w-100 text-center`}>
           <a target="_blank" href="https://icons8.com" className={`${StartPageStyles.mainPageFooterText}`}>Icons by Icons8</a>
         </footer>

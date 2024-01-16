@@ -113,11 +113,10 @@ animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
   animation-delay: 2.1s;
 }
 
-
 .bottomSection{
-  margin-top: 55vh;
+  margin-top: 40vh;
   position: relative;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2347b278' fill-opacity='1' d='M0,224L40,229.3C80,235,160,245,240,261.3C320,277,400,299,480,272C560,245,640,171,720,138.7C800,107,880,117,960,138.7C1040,160,1120,192,1200,176C1280,160,1360,96,1400,64L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2347b278' fillOpacity='1' d='M0,224L40,229.3C80,235,160,245,240,261.3C320,277,400,299,480,272C560,245,640,171,720,138.7C800,107,880,117,960,138.7C1040,160,1120,192,1200,176C1280,160,1360,96,1400,64L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
   background-size: cover;
   background-size: cover;
   background-position: center;
@@ -223,7 +222,7 @@ aspect-ratio: 16 / 9;
   border-radius: 50%;
   margin-left: 15px;
   background: linear-gradient(45deg, 
-    #008c59 0%,   /* Zwiększone stopnie dla koloru #008c59 */
+    #008c59 0%,  
     #47b278 30%, 
     #70cf95 50%, 
     #a2d8a6 75%, 
@@ -231,18 +230,18 @@ aspect-ratio: 16 / 9;
 );
 }
 
-.trichologistTitle{
-font-family: 'Poppins-Bold', sans-serif;
-font-size: 35px;
+.projectTitle{
+  font-family: 'Poppins-Bold', sans-serif;
+  font-size: 35px;
 }
 
-.trichologistSubTitle{
-font-family: 'Lato-Light', sans-serif;
-font-size: 15px;
-margin-left: 10px;
+.projectSubTitle{
+  font-family: 'Lato-Light', sans-serif;
+  font-size: 15px;
+  margin-left: 10px;
 }
 
-.trichologistDescriptionTitle{
+.trichologistIconArea{
   text-align: center;
   padding-top: 1vh;
   font-family: 'Lato-Light', sans-serif;
@@ -278,9 +277,25 @@ margin-left: 10px;
   font-size: 24px;
 }
 
-.trichologistDescriptionTextArea{
+.mainDescriptionArea{
+  font-family: 'Poppins-Bold', sans-serif;
+  font-size: 35px;
   background-color: #47b278;
-  height: 6vh;
+
+}
+
+.mainDescriptionAreaEnd{
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2347b278' fill-opacity='1' d='M0,192L40,192C80,192,160,192,240,213.3C320,235,400,277,480,250.7C560,224,640,128,720,101.3C800,75,880,117,960,138.7C1040,160,1120,160,1200,165.3C1280,171,1360,181,1400,186.7L1440,192L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+}
+
+.mainDescriptionText{
+  font-family: 'Lato-Light', sans-serif;
+  font-size: 18px;
+  padding: 0;
 }
 
 @keyframes bounce {
