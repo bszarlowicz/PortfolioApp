@@ -114,7 +114,7 @@ animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
 }
 
 .bottomSection{
-  margin-top: 40vh;
+  margin-top: 50vh;
   position: relative;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2347b278' fillOpacity='1' d='M0,224L40,229.3C80,235,160,245,240,261.3C320,277,400,299,480,272C560,245,640,171,720,138.7C800,107,880,117,960,138.7C1040,160,1120,192,1200,176C1280,160,1360,96,1400,64L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
   background-size: cover;
@@ -254,6 +254,36 @@ aspect-ratio: 16 / 9;
   width: 45px;
   height: 45px;
   margin: 10px 0px;
+  animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  cursor: pointer;
+}
+
+.iconWrapper {
+  position: relative;
+}
+
+.textOnHover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.textOnHoverVersion{
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.iconWrapper:hover .trichologistDescriptionIcon {
+  animation: scale-out-ver-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.iconWrapper:hover .textOnHover {
+  animation: focus-in-expand 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: 0.4s;
 }
 
 .mainPageFooter{
@@ -281,6 +311,7 @@ aspect-ratio: 16 / 9;
   font-family: 'Poppins-Bold', sans-serif;
   font-size: 35px;
   background-color: #47b278;
+  padding: 20px;
 
 }
 
@@ -348,3 +379,55 @@ aspect-ratio: 16 / 9;
   opacity: 1;
 }
 }
+
+@keyframes scale-out-ver-top {
+  0% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-ver-top {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .trichologistIconArea {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #trychologistPic{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+

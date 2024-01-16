@@ -22,6 +22,7 @@ import Stamps3D from "../components/Stamps3D";
 import ContactLine from "../components/ContactLine";
 import ProjectPicture from "../components/ProjectPicture";
 import ProjectTitle from "../components/ProjectTitle";
+import ProjectDescription from "../components/ProjectDescripiton";
 
 export default function StartPage() {
   const handleCopyToClipboard = (text) => {
@@ -158,55 +159,62 @@ export default function StartPage() {
                 customClassName={`${StartPageStyles.trichologistPic}`}
               />
             </div>
-            <div className={`${StartPageStyles.trichologistIconArea} col-md-4 my-auto`}>
+            <div className={`${StartPageStyles.trichologistIconArea} col-auto my-auto`}>
               <div className={`${StartPageStyles.iconContainer}`}>
                 <div className="row">
-                  <div className="col-md-12">
+                  <div className="col-md-12 py-2">
                     Technologies
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-3">
+                  <div className={`${StartPageStyles.iconWrapper} col-3`}>
                     <img
                       src={railsLogo}
                       className={`${StartPageStyles.trichologistDescriptionIcon}`}
                     />
+                    <span className={`${StartPageStyles.textOnHover}`}>Rails<p className={`${StartPageStyles.textOnHoverVersion}`}>7.1.1</p></span>
                   </div>
-                  <div className="col-3">
+                  <div className={`${StartPageStyles.iconWrapper} col-3`}>
                     <img
                       src={rubyLogo}
                       className={`${StartPageStyles.trichologistDescriptionIcon}`}
                     />
+                    <span className={`${StartPageStyles.textOnHover}`}>Ruby<p className={`${StartPageStyles.textOnHoverVersion}`}>3.2.2</p></span>
                   </div>
-                  <div className="col-3">
+                  <div className={`${StartPageStyles.iconWrapper} col-3`}>
                     <img
                       src={htmlLogo}
                       className={`${StartPageStyles.trichologistDescriptionIcon}`}
                     />
+                    <span className={`${StartPageStyles.textOnHover}`}>HTML5</span>
                   </div>
-                  <div className="col-3">
+                  <div className={`${StartPageStyles.iconWrapper} col-3`}>
                     <img
                       src={cssLogo}
                       className={`${StartPageStyles.trichologistDescriptionIcon}`}
                     />
+                    <span className={`${StartPageStyles.textOnHover}`}>CSS3</span>
                   </div>
-                  <div className="col">
+                  <div className={`${StartPageStyles.iconWrapper} col`}>
                     <img
                       src={bootstrapLogo}
                       className={`${StartPageStyles.trichologistDescriptionIcon}`}
                     />
+                    <span className={`${StartPageStyles.textOnHover}`}>Bootstrap<p className={`${StartPageStyles.textOnHoverVersion}`}>5.3.2</p></span>
                   </div>
-                  <div className="col">
+                  <div className={`${StartPageStyles.iconWrapper} col`}>
                     <img
                       src={sqlLiteLogo}
                       className={`${StartPageStyles.trichologistDescriptionIcon}`}
                     />
+                    <span className={`${StartPageStyles.textOnHover}`}>MySQL<p className={`${StartPageStyles.textOnHoverVersion}`}>0.5.4</p></span>
                   </div>
-                  <div className="col">
+                  <div className={`${StartPageStyles.iconWrapper} col`}>
                     <img
                       src={jsLogo}
                       className={`${StartPageStyles.trichologistDescriptionIcon}`}
                     />
+                    <span className={`${StartPageStyles.textOnHover}`}>JavaScript</span>
                   </div>
                 </div>
                 </div>
@@ -215,24 +223,16 @@ export default function StartPage() {
         </div>
         <div className={`${StartPageStyles.mainDescriptionArea} row px-5`}>
           <div className="col-md-6 px-5">
-            <div className="row">
-              About
-            </div>
-            <div className="row">
-              <div className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
-                <p>I was a member of the development team that focused on building an application based on Ruby on Rails technology. Our application was designed with the aim of facilitating research and efficiently collecting diverse data, including tracking user activity on the website.</p>
-              </div>
-            </div>
+            <ProjectDescription
+              header="About"
+              content="I was a member of the development team that focused on building an application based on Ruby on Rails technology. Our application was designed with the aim of facilitating research and efficiently collecting diverse data, including tracking user activity on the website."
+            />
           </div>
           <div className="col-md-6 px-5">
-            <div className="row">
-              Goal
-            </div>
-            <div className="row">
-              <div className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
-                <p>We emphasized delivering innovative solutions that not only provided a clear user interface but also a functional admin panel, offering full control over the data. Our goal was to make our application not only technologically advanced but also user-friendly, meeting expectations, and providing convenient data management tools.</p>
-              </div>
-            </div>
+            <ProjectDescription
+              header="Goal"
+              content="We emphasized delivering innovative solutions that not only provided a clear user interface but also a functional admin panel, offering full control over the data. Our goal was to make our application not only technologically advanced but also user-friendly, meeting expectations, and providing convenient data management tools."
+            />
           </div>
         </div>
         <div className={`${StartPageStyles.mainDescriptionAreaEnd}`}></div>
