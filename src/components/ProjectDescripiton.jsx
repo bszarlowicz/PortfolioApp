@@ -1,6 +1,10 @@
 import StartPageStyles from "../assets/css/StartPage.module.css";
+import React, { useState } from 'react';
 
 export default function ProjectDescription({ header, content }) {
+
+    const [descriptionSection, setDescriptionSection] = useState(0);
+
     return (
         <div>
             <div className="row">
