@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import StartPageStyles from "../assets/css/StartPage.module.css";
 import curlyBracesImg from "../assets/images/curlyBraces.png";
 import angleBracketsImg from "../assets/images/angleBrackets.png";
@@ -18,13 +18,19 @@ import { EnvelopeAtFill } from "react-bootstrap-icons";
 import { Linkedin } from "react-bootstrap-icons";
 import { TelephoneFill } from "react-bootstrap-icons";
 import { Github } from "react-bootstrap-icons";
+import {PROJECT_ONE} from "../assets/data/data.js";
 import Stamps3D from "../components/Stamps3D";
 import ContactLine from "../components/ContactLine";
 import ProjectPicture from "../components/ProjectPicture";
 import ProjectTitle from "../components/ProjectTitle";
 import ProjectDescription from "../components/ProjectDescripiton";
+import TabButton from "../components/TabButton";
+
 
 export default function StartPage() {
+
+  const [selectedTopic, setSelectedTopic] = useState("about");
+
   const handleCopyToClipboard = (text) => {
     const textarea = document.createElement('textarea');
     textarea.value = text;
@@ -34,6 +40,10 @@ export default function StartPage() {
     document.body.removeChild(textarea);
     alert('Skopiowano do schowka!');
   };
+
+  function handleClick(selectedButton){
+    setSelectedTopic(selectedButton);
+  }
   
   return (
       <div>
@@ -153,7 +163,7 @@ export default function StartPage() {
             projectShortDescription= "Users data - collection/processing/export"
           />
           <div className="row">
-            <div className="col-md-8">
+            <div className={`${StartPageStyles.trichologistPicColumn} col-md-8`}>
               <ProjectPicture 
                 src={trichologist_final}
                 customClassName={`${StartPageStyles.trichologistPic}`}
@@ -221,18 +231,15 @@ export default function StartPage() {
               </div>
             </div>
         </div>
-        <div className={`${StartPageStyles.mainDescriptionArea} row px-5`}>
-          <div className="col-md-6 px-5">
-            <ProjectDescription
-              header="About"
-              content="I was a member of the development team that focused on building an application based on Ruby on Rails technology. Our application was designed with the aim of facilitating research and efficiently collecting diverse data, including tracking user activity on the website."
-            />
-          </div>
-          <div className="col-md-6 px-5">
-            <ProjectDescription
-              header="Goal"
-              content="We emphasized delivering innovative solutions that not only provided a clear user interface but also a functional admin panel, offering full control over the data. Our goal was to make our application not only technologically advanced but also user-friendly, meeting expectations, and providing convenient data management tools."
-            />
+        <div className={`${StartPageStyles.mainDescriptionArea} row`}>
+          <div id="description" className={`${StartPageStyles.descriptionSection} col-md-6 px-5`}>
+            <menu>
+              <TabButton onSelect={() => handleClick('about')}>About</TabButton>
+              <TabButton onSelect={() => handleClick('goal')}>Goal</TabButton>
+            </menu>
+            <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+              {PROJECT_ONE[selectedTopic].description}
+            </div>
           </div>
         </div>
         <div className={`${StartPageStyles.mainDescriptionAreaEnd}`}></div>

@@ -212,8 +212,8 @@ li.contacts:hover span {
 }
 
 .trichologistPic{
-width: 90%;
-aspect-ratio: 16 / 9;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .greenDotProjects{
@@ -301,7 +301,7 @@ aspect-ratio: 16 / 9;
 .iconContainer{
   background: linear-gradient(to top right, #a2d8a6, #70cf95, #70cf95, #a2d8a6, #c3debe);
   border-radius: 12px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   color: #008c59;
   font-weight: 600;
   font-size: 24px;
@@ -311,8 +311,10 @@ aspect-ratio: 16 / 9;
   font-family: 'Poppins-Bold', sans-serif;
   font-size: 35px;
   background-color: #47b278;
-  padding: 20px;
+}
 
+.descriptionSection{
+  margin-left: 90px;
 }
 
 .mainDescriptionAreaEnd{
@@ -327,6 +329,36 @@ aspect-ratio: 16 / 9;
   font-family: 'Lato-Light', sans-serif;
   font-size: 18px;
   padding: 0;
+}
+
+menu {
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+menu button {
+  font-family: 'Poppins-Bold', sans-serif;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: transparent;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+menu button:hover {
+  background-color: #008c59;
+  color: white;
+}
+
+menu button.active {
+  background-color: #008c59;
+  color: white;
 }
 
 @keyframes bounce {
@@ -424,7 +456,11 @@ aspect-ratio: 16 / 9;
     margin-right: auto;
   }
 
-  #trychologistPic{
+  .trichologistPicColumn{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .descriptionSection{
     margin-left: auto;
     margin-right: auto;
   }
