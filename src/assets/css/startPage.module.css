@@ -260,6 +260,7 @@ li.contacts:hover span {
 
 .iconWrapper {
   position: relative;
+  max-width: 250px;
 }
 
 .textOnHover {

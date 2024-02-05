@@ -25,6 +25,7 @@ import ProjectPicture from "../components/ProjectPicture";
 import ProjectTitle from "../components/ProjectTitle";
 import ProjectDescription from "../components/ProjectDescripiton";
 import TabButton from "../components/TabButton";
+import TechnologiesCard from "../components/TechnologiesCard.jsx";
 
 
 export default function StartPage() {
@@ -44,6 +45,16 @@ export default function StartPage() {
   function handleClick(selectedButton){
     setSelectedTopic(selectedButton);
   }
+
+  const TrichologistIconsData = [
+    { path: railsLogo, text: 'Rails', version: '7.1.1' },
+    { path: rubyLogo, text: 'Ruby', version: '3.2.2' },
+    { path: htmlLogo, text: 'HTML5'},
+    { path: cssLogo, text: 'CSS3' },
+    { path: bootstrapLogo, text: 'Bootstrap', version: '5.3.2' },
+    { path: sqlLiteLogo, text: 'MySQL', version: '0.5.4' },
+    { path: jsLogo, text: 'JavaScript' },
+  ];
   
   return (
       <div>
@@ -170,66 +181,11 @@ export default function StartPage() {
               />
             </div>
             <div className={`${StartPageStyles.trichologistIconArea} col-auto my-auto`}>
-              <div className={`${StartPageStyles.iconContainer}`}>
-                <div className="row">
-                  <div className="col-md-12 py-2">
-                    Technologies
-                  </div>
-                </div>
-                <div className="row">
-                  <div className={`${StartPageStyles.iconWrapper} col-3`}>
-                    <img
-                      src={railsLogo}
-                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                    />
-                    <span className={`${StartPageStyles.textOnHover}`}>Rails<p className={`${StartPageStyles.textOnHoverVersion}`}>7.1.1</p></span>
-                  </div>
-                  <div className={`${StartPageStyles.iconWrapper} col-3`}>
-                    <img
-                      src={rubyLogo}
-                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                    />
-                    <span className={`${StartPageStyles.textOnHover}`}>Ruby<p className={`${StartPageStyles.textOnHoverVersion}`}>3.2.2</p></span>
-                  </div>
-                  <div className={`${StartPageStyles.iconWrapper} col-3`}>
-                    <img
-                      src={htmlLogo}
-                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                    />
-                    <span className={`${StartPageStyles.textOnHover}`}>HTML5</span>
-                  </div>
-                  <div className={`${StartPageStyles.iconWrapper} col-3`}>
-                    <img
-                      src={cssLogo}
-                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                    />
-                    <span className={`${StartPageStyles.textOnHover}`}>CSS3</span>
-                  </div>
-                  <div className={`${StartPageStyles.iconWrapper} col`}>
-                    <img
-                      src={bootstrapLogo}
-                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                    />
-                    <span className={`${StartPageStyles.textOnHover}`}>Bootstrap<p className={`${StartPageStyles.textOnHoverVersion}`}>5.3.2</p></span>
-                  </div>
-                  <div className={`${StartPageStyles.iconWrapper} col`}>
-                    <img
-                      src={sqlLiteLogo}
-                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                    />
-                    <span className={`${StartPageStyles.textOnHover}`}>MySQL<p className={`${StartPageStyles.textOnHoverVersion}`}>0.5.4</p></span>
-                  </div>
-                  <div className={`${StartPageStyles.iconWrapper} col`}>
-                    <img
-                      src={jsLogo}
-                      className={`${StartPageStyles.trichologistDescriptionIcon}`}
-                    />
-                    <span className={`${StartPageStyles.textOnHover}`}>JavaScript</span>
-                  </div>
-                </div>
-                </div>
-              </div>
+            <TechnologiesCard
+                iconsData={TrichologistIconsData}
+              />
             </div>
+          </div>
         </div>
         <div className={`${StartPageStyles.mainDescriptionArea} row`}>
           <div id="description" className={`${StartPageStyles.descriptionSection} col-md-6 px-5`}>
