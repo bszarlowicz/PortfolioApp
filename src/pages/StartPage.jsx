@@ -12,6 +12,7 @@ import cssLogo from "../assets/images/cssIcon.png";
 import htmlLogo from "../assets/images/htmlIcon.png";
 import sqlLiteLogo from "../assets/images/mySqlIcon.png";
 import bootstrapLogo from "../assets/images/bootstrapIcon.png";
+import dragAndDropGIF from "../assets/images/DragAndDropGIF.gif";
 import { Link } from "react-scroll";
 import { ChevronCompactDown } from "react-bootstrap-icons";
 import { EnvelopeAtFill } from "react-bootstrap-icons";
@@ -199,6 +200,7 @@ export default function StartPage() {
           </div>
         </div>
         <div className={`${StartPageStyles.mainDescriptionAreaEnd}`}></div>
+        <img src={dragAndDropGIF} alt="Profile"/>
         <footer className={`${StartPageStyles.mainPageFooter} w-100 text-center`}>
           <a target="_blank" href="https://icons8.com" className={`${StartPageStyles.mainPageFooterText}`}>Icons by Icons8</a>
         </footer>
