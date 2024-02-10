@@ -6,6 +6,7 @@ import profileImg from "../assets/images/profileImg.png";
 import hashtagImg from "../assets/images/hashtag.png";
 import trichologist_final from "../assets/images/trycholog_final.png";
 import RegionHub_final from "../assets/images/RegionHub.png";
+import delivery_final from "../assets/images/delivery_final.png";
 import railsLogo from "../assets/images/railsIcon.png";
 import rubyLogo from "../assets/images/rubyIcon.png";
 import jsLogo from "../assets/images/javascriptIcon.png";
@@ -14,7 +15,8 @@ import htmlLogo from "../assets/images/htmlIcon.png";
 import mySqlLogo from "../assets/images/mySqlIcon.png";
 import bootstrapLogo from "../assets/images/bootstrapIcon.png";
 import sqlLiteLogo from "../assets/images/sqlIcon.png";
-import dragAndDropGIF from "../assets/images/DragAndDropGIF.gif";
+import nodejsIcon from "../assets/images/nodejsIcon.png";
+import reactIcon from "../assets/images/reactIcon.png";
 import { Link } from "react-scroll";
 import { ChevronCompactDown } from "react-bootstrap-icons";
 import { EnvelopeAtFill } from "react-bootstrap-icons";
@@ -72,6 +74,16 @@ export default function StartPage() {
     { path: cssLogo, text: 'CSS3' },
     { path: bootstrapLogo, text: 'Bootstrap', version: '5.3.2' },
     { path: sqlLiteLogo, text: 'sqlite3', version: '1.4' },
+    { path: jsLogo, text: 'JavaScript' },
+  ];
+
+  const DeliveryAppIconsData = [
+    { path: reactIcon, text: 'React', version: '^18.2.0' },
+    { path: nodejsIcon, text: 'Node.js', version: '18.17.1' },
+    { path: htmlLogo, text: 'HTML5'},
+    { path: cssLogo, text: 'CSS3' },
+    { path: bootstrapLogo, text: 'Bootstrap', version: '5.3.2' },
+    { path: mySqlLogo, text: 'MySQL'},
     { path: jsLogo, text: 'JavaScript' },
   ];
   
@@ -255,6 +267,41 @@ export default function StartPage() {
               </div>
             </div>
             <div className={`${StartPageStyles.mainDescriptionAreaEndRegionHub}`}></div>
+          </div>
+
+          <div id="DeliveryApp">
+            <div className={`${StartPageStyles.bottomSectionBackgroundDeliveryApp}`}>
+              <ProjectTitle
+                projectName= "Delivery app"
+                projectShortDescription= "Software for a delivery company - handling shipments (customer/courier/admin)"
+              />
+              <div className="row">
+                <div className={`${StartPageStyles.picColumn} col-md-8`}>
+                  <ProjectPicture 
+                    src={delivery_final}
+                    customClassName={`${StartPageStyles.projectPic}`}
+                  />
+                </div>
+                <div className={`${StartPageStyles.projectIconArea} col-auto my-auto`}>
+                <TechnologiesCard
+                    iconsData={DeliveryAppIconsData}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className={`${StartPageStyles.mainDescriptionArea} row`}>
+              <div id="descriptionDeliveryApp" className={`${StartPageStyles.descriptionSection} col-md-6 px-5`}>
+                <menu>
+                  <TabButton onSelect={() => handleClickRegionHub('about')}>About</TabButton>
+                  <TabButton onSelect={() => handleClickRegionHub('goal')}>Goal</TabButton>
+                  <TabButton onSelect={() => handleClickRegionHub('algorithm')}>Algorithm</TabButton>
+                </menu>
+                <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+                  {PROJECT_TWO[selectedTopicRegionHub].description}
+                </div>
+              </div>
+            </div>
+            <div className={`${StartPageStyles.mainDescriptionAreaEndDeliveryApp}`}></div>
           </div>
         </div>
         <footer className={`${StartPageStyles.mainPageFooter} w-100 text-center`}>
