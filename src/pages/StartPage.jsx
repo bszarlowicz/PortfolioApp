@@ -5,13 +5,15 @@ import angleBracketsImg from "../assets/images/angleBrackets.png";
 import profileImg from "../assets/images/profileImg.png";
 import hashtagImg from "../assets/images/hashtag.png";
 import trichologist_final from "../assets/images/trycholog_final.png";
+import RegionHub_final from "../assets/images/RegionHub.png";
 import railsLogo from "../assets/images/railsIcon.png";
 import rubyLogo from "../assets/images/rubyIcon.png";
 import jsLogo from "../assets/images/javascriptIcon.png";
 import cssLogo from "../assets/images/cssIcon.png";
 import htmlLogo from "../assets/images/htmlIcon.png";
-import sqlLiteLogo from "../assets/images/mySqlIcon.png";
+import mySqlLogo from "../assets/images/mySqlIcon.png";
 import bootstrapLogo from "../assets/images/bootstrapIcon.png";
+import sqlLiteLogo from "../assets/images/sqlIcon.png";
 import dragAndDropGIF from "../assets/images/DragAndDropGIF.gif";
 import { Link } from "react-scroll";
 import { ChevronCompactDown } from "react-bootstrap-icons";
@@ -20,6 +22,7 @@ import { Linkedin } from "react-bootstrap-icons";
 import { TelephoneFill } from "react-bootstrap-icons";
 import { Github } from "react-bootstrap-icons";
 import {PROJECT_ONE} from "../assets/data/data.js";
+import {PROJECT_TWO} from "../assets/data/data.js";
 import Stamps3D from "../components/Stamps3D";
 import ContactLine from "../components/ContactLine";
 import ProjectPicture from "../components/ProjectPicture";
@@ -31,7 +34,8 @@ import TechnologiesCard from "../components/TechnologiesCard.jsx";
 
 export default function StartPage() {
 
-  const [selectedTopic, setSelectedTopic] = useState("about");
+  const [selectedTopicTrichologist, setSelectedTopicTrichologist] = useState("about");
+  const [selectedTopicRegionHub, setSelectedTopicRegionHub] = useState("about");
 
   const handleCopyToClipboard = (text) => {
     const textarea = document.createElement('textarea');
@@ -43,8 +47,12 @@ export default function StartPage() {
     alert('Skopiowano do schowka!');
   };
 
-  function handleClick(selectedButton){
-    setSelectedTopic(selectedButton);
+  function handleClickTrichologist(selectedButton){
+    setSelectedTopicTrichologist(selectedButton);
+  }
+
+  function handleClickRegionHub(selectedButton){
+    setSelectedTopicRegionHub(selectedButton);
   }
 
   const TrichologistIconsData = [
@@ -53,7 +61,17 @@ export default function StartPage() {
     { path: htmlLogo, text: 'HTML5'},
     { path: cssLogo, text: 'CSS3' },
     { path: bootstrapLogo, text: 'Bootstrap', version: '5.3.2' },
-    { path: sqlLiteLogo, text: 'MySQL', version: '0.5.4' },
+    { path: mySqlLogo, text: 'MySQL', version: '0.5.4' },
+    { path: jsLogo, text: 'JavaScript' },
+  ];
+
+  const RegionHubIconsData = [
+    { path: railsLogo, text: 'Rails', version: '7.0.7' },
+    { path: rubyLogo, text: 'Ruby', version: '3.1.2' },
+    { path: htmlLogo, text: 'HTML5'},
+    { path: cssLogo, text: 'CSS3' },
+    { path: bootstrapLogo, text: 'Bootstrap', version: '5.3.2' },
+    { path: sqlLiteLogo, text: 'sqlite3', version: '1.4' },
     { path: jsLogo, text: 'JavaScript' },
   ];
   
@@ -169,38 +187,76 @@ export default function StartPage() {
             </Link>
           </div>
         </div>
-        <div  id="MyProjects" className={`${StartPageStyles.bottomSection}`}>
-          <ProjectTitle
-            projectName= "Trichologist app"
-            projectShortDescription= "Users data - collection/processing/export"
-          />
-          <div className="row">
-            <div className={`${StartPageStyles.trichologistPicColumn} col-md-8`}>
-              <ProjectPicture 
-                src={trichologist_final}
-                customClassName={`${StartPageStyles.trichologistPic}`}
+        <div id="MyProjects">
+          <div id="TrychologistApp">
+            <div className={`${StartPageStyles.bottomSectionFirst}`}>
+              <ProjectTitle
+                projectName= "Trichologist app"
+                projectShortDescription= "Users data - collection/processing/export"
               />
+              <div className="row">
+                <div className={`${StartPageStyles.picColumn} col-md-8`}>
+                  <ProjectPicture 
+                    src={trichologist_final}
+                    customClassName={`${StartPageStyles.projectPic}`}
+                  />
+                </div>
+                <div className={`${StartPageStyles.projectIconArea} col-auto my-auto`}>
+                <TechnologiesCard
+                    iconsData={TrichologistIconsData}
+                  />
+                </div>
+              </div>
             </div>
-            <div className={`${StartPageStyles.trichologistIconArea} col-auto my-auto`}>
-            <TechnologiesCard
-                iconsData={TrichologistIconsData}
+            <div className={`${StartPageStyles.mainDescriptionArea} row`}>
+              <div id="descriptionTrychologist" className={`${StartPageStyles.descriptionSection} col-md-6 px-5`}>
+                <menu>
+                  <TabButton onSelect={() => handleClickTrichologist('about')}>About</TabButton>
+                  <TabButton onSelect={() => handleClickTrichologist('goal')}>Goal</TabButton>
+                </menu>
+                <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+                  {PROJECT_ONE[selectedTopicTrichologist].description}
+                </div>
+              </div>
+            </div>
+            <div className={`${StartPageStyles.mainDescriptionAreaEndTrichologist}`}></div>
+          </div>
+
+          <div id="RegionHub">
+            <div className={`${StartPageStyles.bottomSectionBackgroundRegionHub}`}>
+              <ProjectTitle
+                projectName= "RegionHub"
+                projectShortDescription= "Demographic data of regions in Poland and the USA - extensive database with analysis"
               />
+              <div className="row">
+                <div className={`${StartPageStyles.picColumn} col-md-8`}>
+                  <ProjectPicture 
+                    src={RegionHub_final}
+                    customClassName={`${StartPageStyles.projectPic}`}
+                  />
+                </div>
+                <div className={`${StartPageStyles.projectIconArea} col-auto my-auto`}>
+                <TechnologiesCard
+                    iconsData={RegionHubIconsData}
+                  />
+                </div>
+              </div>
             </div>
+            <div className={`${StartPageStyles.mainDescriptionArea} row`}>
+              <div id="descriptionRegionHub" className={`${StartPageStyles.descriptionSection} col-md-6 px-5`}>
+                <menu>
+                  <TabButton onSelect={() => handleClickRegionHub('about')}>About</TabButton>
+                  <TabButton onSelect={() => handleClickRegionHub('goal')}>Goal</TabButton>
+                  <TabButton onSelect={() => handleClickRegionHub('algorithm')}>Algorithm</TabButton>
+                </menu>
+                <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+                  {PROJECT_TWO[selectedTopicRegionHub].description}
+                </div>
+              </div>
+            </div>
+            <div className={`${StartPageStyles.mainDescriptionAreaEndRegionHub}`}></div>
           </div>
         </div>
-        <div className={`${StartPageStyles.mainDescriptionArea} row`}>
-          <div id="description" className={`${StartPageStyles.descriptionSection} col-md-6 px-5`}>
-            <menu>
-              <TabButton onSelect={() => handleClick('about')}>About</TabButton>
-              <TabButton onSelect={() => handleClick('goal')}>Goal</TabButton>
-            </menu>
-            <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
-              {PROJECT_ONE[selectedTopic].description}
-            </div>
-          </div>
-        </div>
-        <div className={`${StartPageStyles.mainDescriptionAreaEnd}`}></div>
-        <img src={dragAndDropGIF} alt="Profile"/>
         <footer className={`${StartPageStyles.mainPageFooter} w-100 text-center`}>
           <a target="_blank" href="https://icons8.com" className={`${StartPageStyles.mainPageFooterText}`}>Icons by Icons8</a>
         </footer>
