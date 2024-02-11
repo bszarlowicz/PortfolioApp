@@ -3,6 +3,8 @@ import StartPageStyles from "../assets/css/StartPage.module.css";
 import curlyBracesImg from "../assets/images/curlyBraces.png";
 import angleBracketsImg from "../assets/images/angleBrackets.png";
 import profileImg from "../assets/images/profileImg.png";
+import profileImgAntek from "../assets/images/Antek.png";
+import profileImgMaciek from "../assets/images/Maciek.jpg";
 import hashtagImg from "../assets/images/hashtag.png";
 import trichologist_final from "../assets/images/trycholog_final.png";
 import RegionHub_final from "../assets/images/RegionHub.png";
@@ -17,6 +19,8 @@ import bootstrapLogo from "../assets/images/bootstrapIcon.png";
 import sqlLiteLogo from "../assets/images/sqlIcon.png";
 import nodejsIcon from "../assets/images/nodejsIcon.png";
 import reactIcon from "../assets/images/reactIcon.png";
+import githubIcon from "../assets/images/githubIcon.png";
+import pdfIcon from "../assets/images/pdfIcon.png";
 import { Link } from "react-scroll";
 import { ChevronCompactDown } from "react-bootstrap-icons";
 import { EnvelopeAtFill } from "react-bootstrap-icons";
@@ -25,6 +29,7 @@ import { TelephoneFill } from "react-bootstrap-icons";
 import { Github } from "react-bootstrap-icons";
 import {PROJECT_ONE} from "../assets/data/data.js";
 import {PROJECT_TWO} from "../assets/data/data.js";
+import {PROJECT_THREE} from "../assets/data/data.js";
 import Stamps3D from "../components/Stamps3D";
 import ContactLine from "../components/ContactLine";
 import ProjectPicture from "../components/ProjectPicture";
@@ -38,6 +43,7 @@ export default function StartPage() {
 
   const [selectedTopicTrichologist, setSelectedTopicTrichologist] = useState("about");
   const [selectedTopicRegionHub, setSelectedTopicRegionHub] = useState("about");
+  const [selectedTopicDeliveryApp, setSelectedTopicDeliveryApp] = useState("about");
 
   const handleCopyToClipboard = (text) => {
     const textarea = document.createElement('textarea');
@@ -57,34 +63,38 @@ export default function StartPage() {
     setSelectedTopicRegionHub(selectedButton);
   }
 
+  function handleClickDeliveryApp(selectedButton){
+    setSelectedTopicDeliveryApp(selectedButton);
+  }
+
   const TrichologistIconsData = [
     { path: railsLogo, text: 'Rails', version: '7.1.1' },
     { path: rubyLogo, text: 'Ruby', version: '3.2.2' },
-    { path: htmlLogo, text: 'HTML5'},
+    { path: jsLogo, text: 'JavaScript' },
+    { path: mySqlLogo, text: 'MySQL', version: '0.5.4' },
     { path: cssLogo, text: 'CSS3' },
     { path: bootstrapLogo, text: 'Bootstrap', version: '5.3.2' },
-    { path: mySqlLogo, text: 'MySQL', version: '0.5.4' },
-    { path: jsLogo, text: 'JavaScript' },
+    { path: htmlLogo, text: 'HTML5'},
   ];
 
   const RegionHubIconsData = [
     { path: railsLogo, text: 'Rails', version: '7.0.7' },
     { path: rubyLogo, text: 'Ruby', version: '3.1.2' },
-    { path: htmlLogo, text: 'HTML5'},
+    { path: jsLogo, text: 'JavaScript' },
+    { path: sqlLiteLogo, text: 'sqlite3', version: '1.4' },
     { path: cssLogo, text: 'CSS3' },
     { path: bootstrapLogo, text: 'Bootstrap', version: '5.3.2' },
-    { path: sqlLiteLogo, text: 'sqlite3', version: '1.4' },
-    { path: jsLogo, text: 'JavaScript' },
+    { path: htmlLogo, text: 'HTML5'},
   ];
 
   const DeliveryAppIconsData = [
     { path: reactIcon, text: 'React', version: '^18.2.0' },
     { path: nodejsIcon, text: 'Node.js', version: '18.17.1' },
-    { path: htmlLogo, text: 'HTML5'},
+    { path: jsLogo, text: 'JavaScript' },
+    { path: mySqlLogo, text: 'MySQL'},
     { path: cssLogo, text: 'CSS3' },
     { path: bootstrapLogo, text: 'Bootstrap', version: '5.3.2' },
-    { path: mySqlLogo, text: 'MySQL'},
-    { path: jsLogo, text: 'JavaScript' },
+    { path: htmlLogo, text: 'HTML5'},
   ];
   
   return (
@@ -292,18 +302,50 @@ export default function StartPage() {
             <div className={`${StartPageStyles.mainDescriptionArea} row`}>
               <div id="descriptionDeliveryApp" className={`${StartPageStyles.descriptionSection} col-md-6 px-5`}>
                 <menu>
-                  <TabButton onSelect={() => handleClickRegionHub('about')}>About</TabButton>
-                  <TabButton onSelect={() => handleClickRegionHub('goal')}>Goal</TabButton>
-                  <TabButton onSelect={() => handleClickRegionHub('algorithm')}>Algorithm</TabButton>
+                  <TabButton onSelect={() => handleClickDeliveryApp('about')}>About</TabButton>
+                  <TabButton onSelect={() => handleClickDeliveryApp('goal')}>Goal</TabButton>
+                  <TabButton onSelect={() => handleClickDeliveryApp('purpose')}>Purpose</TabButton>
                 </menu>
                 <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
-                  {PROJECT_TWO[selectedTopicRegionHub].description}
+                  {PROJECT_THREE[selectedTopicDeliveryApp].description}
+                </div>
+              </div>
+              <div className={`${StartPageStyles.developmentTeamHeader} col-auto mx-auto text-center`}>
+                  Development Team
+                <div className='row mt-3'>
+                  <div className='col-md-4'>
+                    <img src={profileImg} alt="Profile" className={`${StartPageStyles.profilePic}`}/>
+                  </div>
+                  <div className='col-md-4'>
+                    <img src={profileImgAntek} alt="ProfileAnt" className={`${StartPageStyles.profilePicAntek}`}/>
+                  </div>
+                  <div className='col-md-4'>
+                    <img src={profileImgMaciek} alt="ProfileMac" className={`${StartPageStyles.profilePicMaciek}`}/>
+                  </div>
+                </div>
+                <div className='row mt-5'>
+                  <div className='col-6'>
+                  <a href="https://github.com/bszarlowicz/On-demand-Delivery-Platform/tree/main" target="_blank" className={`${StartPageStyles.noDecorations}`}>
+                    <img src={githubIcon} alt="githubIcon" className={`${StartPageStyles.socialsIcons}`}/>
+                    <div className={`${StartPageStyles.additionalTextSocials}`}>
+                      Check out sorce code!
+                    </div>
+                  </a>
+                  </div>
+                  <div className='col-6 pt-1'>
+                    <img src={pdfIcon} alt="pdfIcon" className={`${StartPageStyles.socialsIcons}`}/>
+                    <div className={`${StartPageStyles.additionalTextSocials} mt-1`}>
+                      Check out docs!
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className={`${StartPageStyles.mainDescriptionAreaEndDeliveryApp}`}></div>
           </div>
         </div>
+
+
         <footer className={`${StartPageStyles.mainPageFooter} w-100 text-center`}>
           <a target="_blank" href="https://icons8.com" className={`${StartPageStyles.mainPageFooterText}`}>Icons by Icons8</a>
         </footer>

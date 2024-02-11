@@ -26,3 +26,20 @@ export const PROJECT_TWO = {
       'I implemented a mechanism that, upon entering three variables—area, population, and GDP per capita—displays the 30 most closely matched locations. This tool enables swift and effective comparison of places based on selected criteria, proving particularly valuable for analysis and decision-making.',
   },
 };
+
+export const PROJECT_THREE = {
+  about: {
+    description:
+      'Software for courier companies, enabling the management of the courier delivery process. The project involves three types of user accounts: customer, courier, and admin. The customer can place orders, monitor the status of their parcels, and rate the performance of couriers. The courier has the ability to accept new orders, update parcel statuses, and access the history of completed deliveries. The administrator has access to and the ability to modify data regarding customers, parcels, orders, and payments.',
+  },
+
+  goal: {
+    description:
+      'The software aims to streamline the parcel delivery process through a simple, intuitive interface. The scope of the project includes creating a comprehensive shipment management system that enables customers to quickly submit parcels for delivery and provides couriers with a convenient way to fulfill shipments. Our priority is to ensure a comprehensive tool for customer handling and to facilitate flexible work for couriers.',
+  },
+
+  purpose: {
+    description:
+      'This project was implemented as part of the Programming Engineering course, which is part of the curriculum for the 3rd year of Computer Science in Computer Engineering at the Krakow University of Technology.',
+  },
+};
