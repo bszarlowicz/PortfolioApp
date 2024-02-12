@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import StartPageStyles from "../assets/css/StartPage.module.css";
-import curlyBracesImg from "../assets/images/curlyBraces.png";
 import angleBracketsImg from "../assets/images/angleBrackets.png";
 import profileImg from "../assets/images/profileImg.png";
 import profileImgAntek from "../assets/images/Antek.png";
 import profileImgMaciek from "../assets/images/Maciek.jpg";
-import hashtagImg from "../assets/images/hashtag.png";
 import trichologist_final from "../assets/images/trycholog_final.png";
 import RegionHub_final from "../assets/images/RegionHub.png";
 import delivery_final from "../assets/images/delivery_final.png";
@@ -38,6 +36,8 @@ import ProjectTitle from "../components/ProjectTitle";
 import ProjectDescription from "../components/ProjectDescripiton";
 import TabButton from "../components/TabButton";
 import TechnologiesCard from "../components/TechnologiesCard.jsx";
+import DevelopmentTeam from "../components/DevelopmentTeam.jsx";
+import ProjectLinks from "../components/ProjectLinks.jsx";
 
 
 export default function StartPage() {
@@ -96,6 +96,12 @@ export default function StartPage() {
     { path: cssLogo, text: 'CSS3' },
     { path: bootstrapLogo, text: 'Bootstrap', version: '5.3.2' },
     { path: htmlLogo, text: 'HTML5'},
+  ];
+
+  const DeliveryAppDevelopmentTeamData = [
+    { profileImgPath: profileImg, githubLink: "https://github.com/bszarlowicz"},
+    { profileImgPath: profileImgAntek, githubLink: "https://github.com/AntWalach"},
+    { profileImgPath: profileImgMaciek, githubLink: "https://github.com/maciek102"},
   ];
   
   return (
@@ -312,43 +318,14 @@ export default function StartPage() {
                 </div>
               </div>
               <div className={`${StartPageStyles.developmentTeamHeader} col-auto mx-auto text-center`}>
-                  Development Team
-                <div className='row mt-3'>
-                  <div className={`${StartPageStyles.iconWrapperDevelopment} col-md-4`}>
-                    <img src={profileImg} alt="Profile" className={`${StartPageStyles.profilePic} ${StartPageStyles.developmentTeamPics}`}/>
-                    <div className={`${StartPageStyles.iconOnHover}`}>
-                      <img src={whiteGithubIcon} alt="githubIcon"/>
-                    </div>
-                  </div>
-                  <div className={`${StartPageStyles.iconWrapperDevelopment} col-md-4`}>
-                    <img src={profileImgAntek} alt="ProfileAnt" className={`${StartPageStyles.profilePicAntek} ${StartPageStyles.developmentTeamPics}`}/>
-                    <div className={`${StartPageStyles.iconOnHover}`}>
-                      <img src={whiteGithubIcon} alt="githubIcon"/>
-                    </div>
-                  </div>
-                  <div className={`${StartPageStyles.iconWrapperDevelopment} col-md-4`}>
-                    <img src={profileImgMaciek} alt="ProfileMac" className={`${StartPageStyles.profilePicMaciek} ${StartPageStyles.developmentTeamPics}`}/>
-                    <div className={`${StartPageStyles.iconOnHover}`}>
-                      <img src={whiteGithubIcon} alt="githubIcon"/>
-                    </div>
-                  </div>
-                </div>
-                <div className='row mt-5'>
-                  <div className='col-6'>
-                  <a href="https://github.com/bszarlowicz/On-demand-Delivery-Platform/tree/main" target="_blank" className={`${StartPageStyles.noDecorations}`}>
-                    <img src={githubIcon} alt="githubIcon" className={`${StartPageStyles.socialsIcons}`}/>
-                    <div className={`${StartPageStyles.additionalTextSocials}`}>
-                      Check out sorce code!
-                    </div>
-                  </a>
-                  </div>
-                  <div className='col-6 pt-1'>
-                    <img src={pdfIcon} alt="pdfIcon" className={`${StartPageStyles.socialsIcons}`}/>
-                    <div className={`${StartPageStyles.additionalTextSocials} mt-1`}>
-                      Check out docs!
-                    </div>
-                  </div>
-                </div>
+                <DevelopmentTeam
+                  developmentTeamData={DeliveryAppDevelopmentTeamData}
+                  githubIcon={whiteGithubIcon}
+                />
+                <ProjectLinks
+                  projectGithubLink="https://github.com/bszarlowicz/On-demand-Delivery-Platform"
+                  projectDocsLink="#"
+                />
               </div>
             </div>
             <div className={`${StartPageStyles.mainDescriptionAreaEndDeliveryApp}`}></div>
