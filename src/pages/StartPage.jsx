@@ -20,6 +20,7 @@ import sqlLiteLogo from "../assets/images/sqlIcon.png";
 import nodejsIcon from "../assets/images/nodejsIcon.png";
 import reactIcon from "../assets/images/reactIcon.png";
 import githubIcon from "../assets/images/githubIcon.png";
+import whiteGithubIcon from "../assets/images/whiteGithubIcon.png";
 import pdfIcon from "../assets/images/pdfIcon.png";
 import { Link } from "react-scroll";
 import { ChevronCompactDown } from "react-bootstrap-icons";
@@ -313,14 +314,23 @@ export default function StartPage() {
               <div className={`${StartPageStyles.developmentTeamHeader} col-auto mx-auto text-center`}>
                   Development Team
                 <div className='row mt-3'>
-                  <div className='col-md-4'>
-                    <img src={profileImg} alt="Profile" className={`${StartPageStyles.profilePic}`}/>
+                  <div className={`${StartPageStyles.iconWrapperDevelopment} col-md-4`}>
+                    <img src={profileImg} alt="Profile" className={`${StartPageStyles.profilePic} ${StartPageStyles.developmentTeamPics}`}/>
+                    <div className={`${StartPageStyles.iconOnHover}`}>
+                      <img src={whiteGithubIcon} alt="githubIcon"/>
+                    </div>
                   </div>
-                  <div className='col-md-4'>
-                    <img src={profileImgAntek} alt="ProfileAnt" className={`${StartPageStyles.profilePicAntek}`}/>
+                  <div className={`${StartPageStyles.iconWrapperDevelopment} col-md-4`}>
+                    <img src={profileImgAntek} alt="ProfileAnt" className={`${StartPageStyles.profilePicAntek} ${StartPageStyles.developmentTeamPics}`}/>
+                    <div className={`${StartPageStyles.iconOnHover}`}>
+                      <img src={whiteGithubIcon} alt="githubIcon"/>
+                    </div>
                   </div>
-                  <div className='col-md-4'>
-                    <img src={profileImgMaciek} alt="ProfileMac" className={`${StartPageStyles.profilePicMaciek}`}/>
+                  <div className={`${StartPageStyles.iconWrapperDevelopment} col-md-4`}>
+                    <img src={profileImgMaciek} alt="ProfileMac" className={`${StartPageStyles.profilePicMaciek} ${StartPageStyles.developmentTeamPics}`}/>
+                    <div className={`${StartPageStyles.iconOnHover}`}>
+                      <img src={whiteGithubIcon} alt="githubIcon"/>
+                    </div>
                   </div>
                 </div>
                 <div className='row mt-5'>

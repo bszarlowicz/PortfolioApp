@@ -185,6 +185,10 @@ margin-left: 10px;
   margin-left: 10px;
   }
 
+.developmentTeamPics{
+  cursor: pointer;
+}
+
 .contactIcon{
 color: #008c59;
 margin-top: 2px;
@@ -285,7 +289,6 @@ li.contacts:hover span {
   height: 45px;
   margin: 10px 0px;
   animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  cursor: pointer;
 }
 
 .iconWrapper {
@@ -300,12 +303,10 @@ li.contacts:hover span {
   transform: translate(-50%, -50%);
   opacity: 0;
   font-size: 16px;
-  cursor: pointer;
 }
 
 .textOnHoverVersion{
   font-size: 10px;
-  cursor: pointer;
 }
 
 .iconWrapper:hover .trichologistDescriptionIcon {
@@ -439,6 +440,27 @@ menu button.active {
 .noDecorations{
   text-decoration: none;
 }
+
+.iconWrapperDevelopment{
+  position: relative;
+}
+
+.iconOnHover{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.iconWrapperDevelopment:hover .iconOnHover {
+  animation: focus-in-expand 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.iconWrapperDevelopment:hover .developmentTeamPics {
+  filter: brightness(50%);
+}
+
 
 @keyframes bounce {
 0%, 20%, 50%, 80%, 100% {
