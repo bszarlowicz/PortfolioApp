@@ -49,7 +49,6 @@ export default function StartPage() {
   const [selectedTopicRegionHub, setSelectedTopicRegionHub] = useState("about");
   const [selectedTopicDeliveryApp, setSelectedTopicDeliveryApp] = useState("about");
   const [selectedTopicPomodoroApp, setSelectedTopicPomodoroApp] = useState("about");
-  const [activeButton, setActiveButton] = useState(null);
 
   const handleCopyToClipboard = (text) => {
     const textarea = document.createElement('textarea');
@@ -60,18 +59,6 @@ export default function StartPage() {
     document.body.removeChild(textarea);
     alert('Skopiowano do schowka!');
   };
-
-  const handleClick = (button) => {
-    if (activeButton !== null) {
-      activeButton.classList.remove('active');
-    }
-
-    button.classList.add('active');
-    setActiveButton(button);
-  };
-
-
-  
 
   function handleClickTrichologist(selectedButton){
     setSelectedTopicTrichologist(selectedButton);
