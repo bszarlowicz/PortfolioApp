@@ -252,10 +252,10 @@ export default function StartPage() {
               </div>
             </div>
             <div className={`${StartPageStyles.mainDescriptionArea} row`}>
-              <div id="descriptionTrychologist" className={`${StartPageStyles.descriptionSection} col-md-6 px-5`}>
-                <menu>
-                  <TabButton onSelect={() => handleClickTrichologist('about')}>About</TabButton>
-                  <TabButton onSelect={() => handleClickTrichologist('goal')}>Goal</TabButton>
+              <div id="descriptionTrychologist" className={`${StartPageStyles.descriptionSection} col-md-6`}>
+                <menu className='my-0'>
+                  <TabButton onSelect={() => handleClickTrichologist('about')} isActive={selectedTopicTrichologist==="about"}>About</TabButton>
+                  <TabButton onSelect={() => handleClickTrichologist('goal')} isActive={selectedTopicTrichologist==="goal"}>Goal</TabButton>
                 </menu>
                 <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
                   {PROJECT_ONE[selectedTopicTrichologist].description}
@@ -286,11 +286,11 @@ export default function StartPage() {
               </div>
             </div>
             <div className={`${StartPageStyles.mainDescriptionArea} row`}>
-              <div id="descriptionRegionHub" className={`${StartPageStyles.descriptionSection} col-md-6 px-5`}>
-                <menu>
-                  <TabButton onSelect={() => handleClickRegionHub('about')}>About</TabButton>
-                  <TabButton onSelect={() => handleClickRegionHub('goal')}>Goal</TabButton>
-                  <TabButton onSelect={() => handleClickRegionHub('algorithm')}>Algorithm</TabButton>
+              <div id="descriptionRegionHub" className={`${StartPageStyles.descriptionSection} col-md-6`}>
+                <menu  className='my-0'>
+                  <TabButton onSelect={() => handleClickRegionHub('about')} isActive={selectedTopicRegionHub==="about"}>About</TabButton>
+                  <TabButton onSelect={() => handleClickRegionHub('goal')} isActive={selectedTopicRegionHub==="goal"}>Goal</TabButton>
+                  <TabButton onSelect={() => handleClickRegionHub('algorithm')} isActive={selectedTopicRegionHub==="algorithm"}>Algorithm</TabButton>
                 </menu>
                 <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
                   {PROJECT_TWO[selectedTopicRegionHub].description}
@@ -321,11 +321,11 @@ export default function StartPage() {
               </div>
             </div>
             <div className={`${StartPageStyles.mainDescriptionArea} row`}>
-              <div id="descriptionDeliveryApp" className={`${StartPageStyles.descriptionSection} col-md-6 px-5`}>
-                <menu>
-                  <TabButton onSelect={() => handleClickDeliveryApp('about')}>About</TabButton>
-                  <TabButton onSelect={() => handleClickDeliveryApp('goal')}>Goal</TabButton>
-                  <TabButton onSelect={() => handleClickDeliveryApp('purpose')}>Purpose</TabButton>
+              <div id="descriptionDeliveryApp" className={`${StartPageStyles.descriptionSection} col-md-6`}>
+                <menu  className='my-0'>
+                  <TabButton onSelect={() => handleClickDeliveryApp('about')} isActive={selectedTopicDeliveryApp==="about"}>About</TabButton>
+                  <TabButton onSelect={() => handleClickDeliveryApp('goal')} isActive={selectedTopicDeliveryApp==="goal"}>Goal</TabButton>
+                  <TabButton onSelect={() => handleClickDeliveryApp('purpose')} isActive={selectedTopicDeliveryApp==="purpose"}>Purpose</TabButton>
                 </menu>
                 <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
                   {PROJECT_THREE[selectedTopicDeliveryApp].description}
@@ -369,9 +369,9 @@ export default function StartPage() {
               </div>
             </div>
             <div className={`${StartPageStyles.mainDescriptionArea} row`}>
-              <div id="descriptionPomodoroApp" className={`${StartPageStyles.descriptionSection} col-md-6 px-5`}>
-                <menu>
-                  <TabButton onSelect={() => handleClickPomodoroApp('about')}>About</TabButton>
+              <div id="descriptionPomodoroApp" className={`${StartPageStyles.descriptionSection} col-md-6`}>
+                <menu  className='my-0'>
+                  <TabButton onSelect={() => handleClickPomodoroApp('about')} isActive={selectedTopicPomodoroApp==="about"}>About</TabButton>
                 </menu>
                 <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
                   {PROJECT_FOUR[selectedTopicPomodoroApp].description}

@@ -289,7 +289,7 @@ li.contacts:hover span {
   width: 45px;
   height: 45px;
   margin: 10px 0px;
-  animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .iconWrapper {
@@ -311,7 +311,7 @@ li.contacts:hover span {
 }
 
 .iconWrapper:hover .trichologistDescriptionIcon {
-  animation: scale-out-ver-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .iconWrapper:hover .textOnHover {
@@ -376,7 +376,10 @@ li.contacts:hover span {
 .mainDescriptionText{
   font-family: 'Lato-Light', sans-serif;
   font-size: 18px;
-  padding: 0;
+  padding: 20px;
+  background-color: #008c59;
+  border-radius: 0 12px 12px 12px;
+
 }
 
 menu {
@@ -391,7 +394,7 @@ menu button {
   font-family: 'Poppins-Bold', sans-serif;
   padding: 0.5rem 1rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
   background-color: transparent;
   color: white;
   font-size: 35px;
@@ -580,6 +583,29 @@ menu button.active {
     transform: scale3d(1, 1, 1);
   }
 }
+
+@keyframes scale-out-center {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 
 @media only screen and (max-width: 1300px) {
   .projectIconArea {
