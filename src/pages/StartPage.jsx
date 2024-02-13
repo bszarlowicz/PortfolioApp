@@ -8,6 +8,7 @@ import trichologist_final from "../assets/images/trycholog_final.png";
 import RegionHub_final from "../assets/images/RegionHub.png";
 import delivery_final from "../assets/images/delivery_final.png";
 import PomodoroApp_final from "../assets/images/PomodoroTechnique1.png";
+import DragAndDrop_final from "../assets/images/DragAndDropApp.png";
 import railsLogo from "../assets/images/railsIcon.png";
 import rubyLogo from "../assets/images/rubyIcon.png";
 import jsLogo from "../assets/images/javascriptIcon.png";
@@ -20,6 +21,7 @@ import nodejsIcon from "../assets/images/nodejsIcon.png";
 import reactIcon from "../assets/images/reactIcon.png";
 import githubIcon from "../assets/images/githubIcon.png";
 import whiteGithubIcon from "../assets/images/whiteGithubIcon.png";
+import whiteLinkedInIcon from "../assets/images/whiteLinkedInIcon.png";
 import pdfIcon from "../assets/images/pdfIcon.png";
 import webIcon from "../assets/images/webIcon.png";
 import { Link } from "react-scroll";
@@ -32,6 +34,7 @@ import {PROJECT_ONE} from "../assets/data/data.js";
 import {PROJECT_TWO} from "../assets/data/data.js";
 import {PROJECT_THREE} from "../assets/data/data.js";
 import {PROJECT_FOUR} from "../assets/data/data.js";
+import {PROJECT_FIVE} from "../assets/data/data.js";
 import Stamps3D from "../components/Stamps3D";
 import ContactLine from "../components/ContactLine";
 import ProjectPicture from "../components/ProjectPicture";
@@ -48,6 +51,7 @@ export default function StartPage() {
   const [selectedTopicTrichologist, setSelectedTopicTrichologist] = useState("about");
   const [selectedTopicRegionHub, setSelectedTopicRegionHub] = useState("about");
   const [selectedTopicDeliveryApp, setSelectedTopicDeliveryApp] = useState("about");
+  const [selectedTopicDragAndDropApp, setSelectedTopicDragAndDropApp] = useState("about");
   const [selectedTopicPomodoroApp, setSelectedTopicPomodoroApp] = useState("about");
 
   const handleCopyToClipboard = (text) => {
@@ -70,6 +74,10 @@ export default function StartPage() {
 
   function handleClickDeliveryApp(selectedButton){
     setSelectedTopicDeliveryApp(selectedButton);
+  }
+
+  function handleClickDragAndDropApp(selectedButton){
+    setSelectedTopicDragAndDropApp(selectedButton);
   }
 
   function handleClickPomodoroApp(selectedButton){
@@ -107,9 +115,19 @@ export default function StartPage() {
   ];
 
   const DeliveryAppDevelopmentTeamData = [
-    { profileImgPath: profileImg, githubLink: "https://github.com/bszarlowicz"},
-    { profileImgPath: profileImgAntek, githubLink: "https://github.com/AntWalach"},
-    { profileImgPath: profileImgMaciek, githubLink: "https://github.com/maciek102"},
+    { profileImgPath: profileImg, githubLink: "https://www.linkedin.com/in/bartosz-szarlowicz/"},
+    { profileImgPath: profileImgAntek, githubLink: "https://www.linkedin.com/in/antoni-walach/"},
+    { profileImgPath: profileImgMaciek, githubLink: "https://www.linkedin.com/in/maciej-walczak-388895270/"},
+  ];
+
+  const DragAndDropData = [
+    { path: railsLogo, text: 'Rails', version: '7.1.2' },
+    { path: rubyLogo, text: 'Ruby', version: '3.2.2' },
+    { path: jsLogo, text: 'JavaScript' },
+    { path: sqlLiteLogo, text: 'sqlite3', version: '1.4' },
+    { path: htmlLogo, text: 'HTML5'},
+    { path: bootstrapLogo, text: 'Bootstrap', version: '5.1.3' },
+    { path: cssLogo, text: 'CSS3' },
   ];
 
   const PomodoroAppIconsData = [
@@ -334,7 +352,7 @@ export default function StartPage() {
               <div className={`${StartPageStyles.developmentTeamHeader} col-auto mx-auto text-center`}>
                 <DevelopmentTeam
                   developmentTeamData={DeliveryAppDevelopmentTeamData}
-                  githubIcon={whiteGithubIcon}
+                  githubIcon={whiteLinkedInIcon}
                 />
                 <ProjectLinks
                   firstLink="https://github.com/bszarlowicz/On-demand-Delivery-Platform"
@@ -348,6 +366,52 @@ export default function StartPage() {
             </div>
             <div className={`${StartPageStyles.mainDescriptionAreaEndDeliveryApp}`}></div>
           </div>
+
+          <div id="DragAndDropApp">
+            <div className={`${StartPageStyles.bottomSectionBackgroundDragAndDropApp}`}>
+              <ProjectTitle
+                projectName= "Sentence Puzzle"
+                projectShortDescription= "HTML Drag and Drop API implementation - composing random words using the drag and drop method"
+              />
+              <div className="row">
+                <div className={`${StartPageStyles.picColumn} col-md-8`}>
+                  <ProjectPicture 
+                    src={DragAndDrop_final}
+                    customClassName={`${StartPageStyles.projectPic}`}
+                  />
+                </div>
+                <div className={`${StartPageStyles.projectIconArea} col-auto my-auto`}>
+                <TechnologiesCard
+                    iconsData={DragAndDropData}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className={`${StartPageStyles.mainDescriptionArea} row`}>
+              <div id="descriptionDragAndDropApp" className={`${StartPageStyles.descriptionSection} col-md-6`}>
+                <menu  className='my-0'>
+                  <TabButton onSelect={() => handleClickDragAndDropApp('about')} isActive={selectedTopicDragAndDropApp==="about"}>About</TabButton>
+                  <TabButton onSelect={() => handleClickDragAndDropApp('goal')} isActive={selectedTopicDragAndDropApp==="goal"}>Goal</TabButton>
+                  <TabButton onSelect={() => handleClickDragAndDropApp('docker')} isActive={selectedTopicDragAndDropApp==="docker"}>Docker config</TabButton>
+                </menu>
+                <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+                  {PROJECT_FIVE[selectedTopicDragAndDropApp].description}
+                </div>
+              </div>
+              <div className={`${StartPageStyles.developmentTeamHeader} col-auto mx-auto text-center w-25 pt-5 mt-3`}>
+              <ProjectLinks
+                  firstLink="https://github.com/bszarlowicz/Rails7-DragAndDrop-Docker"
+                  secondLink="#"
+                  firstIcon={githubIcon}
+                  secondIcon={webIcon}
+                  firstCaption="Check out sorce code!"
+                  secondCaption="Try it!"
+                />
+              </div>
+            </div>
+            <div className={`${StartPageStyles.mainDescriptionAreaEndDragAndDropApp}`}></div>
+          </div>
+
           <div id="PomodoroApp">
             <div className={`${StartPageStyles.bottomSectionBackgroundRegionHub}`}>
               <ProjectTitle

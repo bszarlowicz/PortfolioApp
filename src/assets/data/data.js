@@ -50,3 +50,20 @@ export const PROJECT_FOUR = {
       'The Pomodoro Technique is a time management method based on several minutes of focused work, broken by a few minutes of breaks. Longer breaks, typically 15 to 30 minutes, are taken after four consecutive work intervals. This is my first application written using Vanilla JavaScript. The process of creating this tool allowed me to learn the basic principles of JavaScript.',
   },
 };
+
+export const PROJECT_FIVE = {
+  about: {
+    description:  
+    "The application allows users to create sentences from which random words are selected (the quantity depends on the sentence's length). Random words are extracted from the sentence, leaving gaps in their place, and then transferred to the bottom section as movable blocks. The user's task is to arrange the words in the correct gaps to form a valid sentence.",
+  },
+
+  goal: {
+    description:
+      'This application was created to learn the drag and drop mechanism of HTML elements using HTML Drag and Drop API with vanilla JavaScript.',
+  },
+
+  docker: {
+    description:
+      'In this project, I implemented a Docker configuration for a Rails 7 application, providing step-by-step instructions for setting up the environment on a Windows system. By combining Rails 7 and Docker, the project aims to streamline development and enhance portability across different environments',
+  },
+};
