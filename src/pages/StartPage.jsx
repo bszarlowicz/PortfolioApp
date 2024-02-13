@@ -44,6 +44,7 @@ import TabButton from "../components/TabButton";
 import TechnologiesCard from "../components/TechnologiesCard.jsx";
 import DevelopmentTeam from "../components/DevelopmentTeam.jsx";
 import ProjectLinks from "../components/ProjectLinks.jsx";
+import dempDragAndDrop from "../assets/videos/DragAndDrop.mp4";
 
 
 export default function StartPage() {
@@ -401,11 +402,11 @@ export default function StartPage() {
               <div className={`${StartPageStyles.developmentTeamHeader} col-auto mx-auto text-center w-25 pt-5 mt-3`}>
               <ProjectLinks
                   firstLink="https://github.com/bszarlowicz/Rails7-DragAndDrop-Docker"
-                  secondLink="#"
+                  secondLink={dempDragAndDrop}
                   firstIcon={githubIcon}
                   secondIcon={webIcon}
                   firstCaption="Check out sorce code!"
-                  secondCaption="Try it!"
+                  secondCaption="Watch the demo!"
                 />
               </div>
             </div>
