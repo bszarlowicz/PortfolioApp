@@ -43,3 +43,10 @@ export const PROJECT_THREE = {
       'This project was implemented as part of the Programming Engineering course, which is part of the curriculum for the 3rd year of Computer Science in Computer Engineering at the Krakow University of Technology.',
   },
 };
+
+export const PROJECT_FOUR = {
+  about: {
+    description:
+      'The Pomodoro Technique is a time management method based on several minutes of focused work, broken by a few minutes of breaks. Longer breaks, typically 15 to 30 minutes, are taken after four consecutive work intervals. This is my first application written using Vanilla JavaScript. The process of creating this tool allowed me to learn the basic principles of JavaScript.',
+  },
+};

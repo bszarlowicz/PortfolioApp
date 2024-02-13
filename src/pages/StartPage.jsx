@@ -7,6 +7,7 @@ import profileImgMaciek from "../assets/images/Maciek.jpg";
 import trichologist_final from "../assets/images/trycholog_final.png";
 import RegionHub_final from "../assets/images/RegionHub.png";
 import delivery_final from "../assets/images/delivery_final.png";
+import PomodoroApp_final from "../assets/images/PomodoroTechnique1.png";
 import railsLogo from "../assets/images/railsIcon.png";
 import rubyLogo from "../assets/images/rubyIcon.png";
 import jsLogo from "../assets/images/javascriptIcon.png";
@@ -20,6 +21,7 @@ import reactIcon from "../assets/images/reactIcon.png";
 import githubIcon from "../assets/images/githubIcon.png";
 import whiteGithubIcon from "../assets/images/whiteGithubIcon.png";
 import pdfIcon from "../assets/images/pdfIcon.png";
+import webIcon from "../assets/images/webIcon.png";
 import { Link } from "react-scroll";
 import { ChevronCompactDown } from "react-bootstrap-icons";
 import { EnvelopeAtFill } from "react-bootstrap-icons";
@@ -29,6 +31,7 @@ import { Github } from "react-bootstrap-icons";
 import {PROJECT_ONE} from "../assets/data/data.js";
 import {PROJECT_TWO} from "../assets/data/data.js";
 import {PROJECT_THREE} from "../assets/data/data.js";
+import {PROJECT_FOUR} from "../assets/data/data.js";
 import Stamps3D from "../components/Stamps3D";
 import ContactLine from "../components/ContactLine";
 import ProjectPicture from "../components/ProjectPicture";
@@ -45,6 +48,8 @@ export default function StartPage() {
   const [selectedTopicTrichologist, setSelectedTopicTrichologist] = useState("about");
   const [selectedTopicRegionHub, setSelectedTopicRegionHub] = useState("about");
   const [selectedTopicDeliveryApp, setSelectedTopicDeliveryApp] = useState("about");
+  const [selectedTopicPomodoroApp, setSelectedTopicPomodoroApp] = useState("about");
+  const [activeButton, setActiveButton] = useState(null);
 
   const handleCopyToClipboard = (text) => {
     const textarea = document.createElement('textarea');
@@ -56,6 +61,18 @@ export default function StartPage() {
     alert('Skopiowano do schowka!');
   };
 
+  const handleClick = (button) => {
+    if (activeButton !== null) {
+      activeButton.classList.remove('active');
+    }
+
+    button.classList.add('active');
+    setActiveButton(button);
+  };
+
+
+  
+
   function handleClickTrichologist(selectedButton){
     setSelectedTopicTrichologist(selectedButton);
   }
@@ -66,6 +83,10 @@ export default function StartPage() {
 
   function handleClickDeliveryApp(selectedButton){
     setSelectedTopicDeliveryApp(selectedButton);
+  }
+
+  function handleClickPomodoroApp(selectedButton){
+    setSelectedTopicPomodoroApp(selectedButton);
   }
 
   const TrichologistIconsData = [
@@ -102,6 +123,12 @@ export default function StartPage() {
     { profileImgPath: profileImg, githubLink: "https://github.com/bszarlowicz"},
     { profileImgPath: profileImgAntek, githubLink: "https://github.com/AntWalach"},
     { profileImgPath: profileImgMaciek, githubLink: "https://github.com/maciek102"},
+  ];
+
+  const PomodoroAppIconsData = [
+    { path: jsLogo, text: 'JavaScript', version: 'Vanilla'},
+    { path: cssLogo, text: 'CSS3' },
+    { path: htmlLogo, text: 'HTML5'},
   ];
   
   return (
@@ -323,12 +350,58 @@ export default function StartPage() {
                   githubIcon={whiteGithubIcon}
                 />
                 <ProjectLinks
-                  projectGithubLink="https://github.com/bszarlowicz/On-demand-Delivery-Platform"
-                  projectDocsLink="#"
+                  firstLink="https://github.com/bszarlowicz/On-demand-Delivery-Platform"
+                  secondLink="#"
+                  firstIcon={githubIcon}
+                  secondIcon={pdfIcon}
+                  firstCaption="Check out sorce code!"
+                  secondCaption="Check out docs!"
                 />
               </div>
             </div>
             <div className={`${StartPageStyles.mainDescriptionAreaEndDeliveryApp}`}></div>
+          </div>
+          <div id="PomodoroApp">
+            <div className={`${StartPageStyles.bottomSectionBackgroundRegionHub}`}>
+              <ProjectTitle
+                projectName= "Pomodoro clock"
+                projectShortDescription= "An application for measuring working time - effective work with the pomodoro technique"
+              />
+              <div className="row">
+                <div className={`${StartPageStyles.picColumn} col-md-8`}>
+                  <ProjectPicture 
+                    src={PomodoroApp_final}
+                    customClassName={`${StartPageStyles.projectPic}`}
+                  />
+                </div>
+                <div className={`${StartPageStyles.projectIconArea} col-auto my-auto`}>
+                <TechnologiesCard
+                    iconsData={PomodoroAppIconsData}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className={`${StartPageStyles.mainDescriptionArea} row`}>
+              <div id="descriptionPomodoroApp" className={`${StartPageStyles.descriptionSection} col-md-6 px-5`}>
+                <menu>
+                  <TabButton onSelect={() => handleClickPomodoroApp('about')}>About</TabButton>
+                </menu>
+                <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+                  {PROJECT_FOUR[selectedTopicPomodoroApp].description}
+                </div>
+              </div>
+              <div className={`${StartPageStyles.developmentTeamHeader} col-auto mx-auto text-center w-25 pt-5 mt-3`}>
+              <ProjectLinks
+                  firstLink="https://github.com/bszarlowicz/pomodoro-techinque-webiste"
+                  secondLink="https://pomodoro-technique-bszarlowicz.netlify.app"
+                  firstIcon={githubIcon}
+                  secondIcon={webIcon}
+                  firstCaption="Check out sorce code!"
+                  secondCaption="Try it!"
+                />
+              </div>
+            </div>
+            <div className={`${StartPageStyles.mainDescriptionAreaEndRegionHub}`}></div>
           </div>
         </div>
 
