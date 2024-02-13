@@ -7,8 +7,8 @@ import profileImgMaciek from "../assets/images/Maciek.jpg";
 import trichologist_final from "../assets/images/trycholog_final.png";
 import RegionHub_final from "../assets/images/RegionHub.png";
 import delivery_final from "../assets/images/delivery_final.png";
-import PomodoroApp_final from "../assets/images/PomodoroTechnique1.png";
-import DragAndDrop_final from "../assets/images/DragAndDropApp.png";
+import pomodoroApp_final from "../assets/images/PomodoroTechnique1.png";
+import dragAndDrop_final from "../assets/images/DragAndDropApp.png";
 import railsLogo from "../assets/images/railsIcon.png";
 import rubyLogo from "../assets/images/rubyIcon.png";
 import jsLogo from "../assets/images/javascriptIcon.png";
@@ -44,7 +44,8 @@ import TabButton from "../components/TabButton";
 import TechnologiesCard from "../components/TechnologiesCard.jsx";
 import DevelopmentTeam from "../components/DevelopmentTeam.jsx";
 import ProjectLinks from "../components/ProjectLinks.jsx";
-import dempDragAndDrop from "../assets/videos/DragAndDrop.mp4";
+import demoDragAndDrop from "../assets/videos/DragAndDrop.mp4";
+import deliveryAppDocs from "../assets/data/DeliveryAppDocs.pdf";
 
 
 export default function StartPage() {
@@ -357,7 +358,7 @@ export default function StartPage() {
                 />
                 <ProjectLinks
                   firstLink="https://github.com/bszarlowicz/On-demand-Delivery-Platform"
-                  secondLink="#"
+                  secondLink={deliveryAppDocs}
                   firstIcon={githubIcon}
                   secondIcon={pdfIcon}
                   firstCaption="Check out sorce code!"
@@ -377,7 +378,7 @@ export default function StartPage() {
               <div className="row">
                 <div className={`${StartPageStyles.picColumn} col-md-8`}>
                   <ProjectPicture 
-                    src={DragAndDrop_final}
+                    src={dragAndDrop_final}
                     customClassName={`${StartPageStyles.projectPic}`}
                   />
                 </div>
@@ -402,7 +403,7 @@ export default function StartPage() {
               <div className={`${StartPageStyles.developmentTeamHeader} col-auto mx-auto text-center w-25 pt-5 mt-3`}>
               <ProjectLinks
                   firstLink="https://github.com/bszarlowicz/Rails7-DragAndDrop-Docker"
-                  secondLink={dempDragAndDrop}
+                  secondLink={demoDragAndDrop}
                   firstIcon={githubIcon}
                   secondIcon={webIcon}
                   firstCaption="Check out sorce code!"
@@ -422,7 +423,7 @@ export default function StartPage() {
               <div className="row">
                 <div className={`${StartPageStyles.picColumn} col-md-8`}>
                   <ProjectPicture 
-                    src={PomodoroApp_final}
+                    src={pomodoroApp_final}
                     customClassName={`${StartPageStyles.projectPic}`}
                   />
                 </div>
@@ -456,7 +457,6 @@ export default function StartPage() {
             <div className={`${StartPageStyles.mainDescriptionAreaEndRegionHub}`}></div>
           </div>
         </div>
-
 
         <footer className={`${StartPageStyles.mainPageFooter} w-100 text-center`}>
           <a target="_blank" href="https://icons8.com" className={`${StartPageStyles.mainPageFooterText}`}>Icons by Icons8</a>
