@@ -1,3 +1,5 @@
+@import url('variables.css');
+
 @font-face {
   font-family: 'Vercetti-Regular';
   src: url('../../public/fonts/Vercetti-Regular.woff2') format('woff2'),
@@ -39,7 +41,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #70cf95;
+  background-color: var(--green-2-color);
   color: white;
   margin: 0;
   height: 100vh;
@@ -198,7 +200,7 @@ margin-left: 10px;
 }
 
 .contactIcon{
-color: #008c59;
+color: var(--green-4-color);
 margin-top: 2px;
 margin-right: 2px;
 margin-left: 1px;
@@ -210,7 +212,7 @@ cursor: pointer;
 
 li.contacts {
 overflow: hidden;
-background: #c3debe;
+background: var(--green-0-color);
 list-style: none;
 white-space:nowrap;
 margin-right: 10px;
@@ -220,7 +222,7 @@ display: inline-block;
 
 li.contacts span {
 opacity: 0;
-color: #008c59;
+color: var(--green-4-color);
 max-width: 0;
 display: inline-block;
 text-decoration: none;
@@ -228,7 +230,7 @@ transition: max-width 1s ease-out .1s, opacity 1s ease-out .1s, color;
 }
 
 li.contacts span:hover {
-  color: #008c59;
+  color: var(--green-4-color);
 }
 
 li.contacts span i {
@@ -265,11 +267,11 @@ li.contacts:hover span {
   border-radius: 50%;
   margin-left: 15px;
   background: linear-gradient(45deg, 
-    #008c59 0%,  
-    #47b278 30%, 
-    #70cf95 50%, 
-    #a2d8a6 75%, 
-    #c3debe 100%
+    var(--green-4-color) 0%,  
+    var(--green-3-color) 30%, 
+    var(--green-2-color) 50%, 
+    var(--green-1-color) 75%, 
+    var(--green-0-color) 100%
 );
 }
 
@@ -328,10 +330,10 @@ li.contacts:hover span {
 }
 
 .iconContainer{
-  background: linear-gradient(to top right, #a2d8a6, #70cf95, #70cf95, #a2d8a6, #c3debe);
+  background: linear-gradient(to top right, var(--green-1-color), var(--green-2-color), var(--green-2-color), var(--green-1-color), var(--green-0-color));
   border-radius: 12px;
   margin-bottom: 15vh;
-  color: #008c59;
+  color: var(--green-4-color);
   font-weight: 600;
   font-size: 24px;
 }
@@ -339,7 +341,7 @@ li.contacts:hover span {
 .mainDescriptionArea{
   font-family: 'Poppins-Bold', sans-serif;
   font-size: 35px;
-  background-color: #47b278;
+  background-color: var(--green-3-color);
   min-height: 290px;
 }
 
@@ -380,7 +382,7 @@ li.contacts:hover span {
   font-family: 'Lato-Light', sans-serif;
   font-size: 18px;
   padding: 20px;
-  background-color: #008c59;
+  background-color: var(--green-4-color);
   border-radius: 0 12px 12px 12px;
 
 }
@@ -406,17 +408,17 @@ menu button {
 }
 
 menu button:hover {
-  background-color: #008c59;
+  background-color: var(--green-4-color);
   color: white;
 }
 
 menu button.active {
-  background-color: #008c59;
+  background-color: var(--green-4-color);
   color: white;
 }
 
 .active {
-  background-color: #008c59;
+  background-color: var(--green-4-color);
 }
 
 .developmentTeamHeader{
@@ -437,7 +439,7 @@ menu button.active {
 .additionalTextSocials{
   font-family: 'Poppins-Bold', sans-serif;
   font-size: 10px;
-  color: #008c59;
+  color: var(--green-4-color);
 }
 
 .socialsIcons{
@@ -474,7 +476,7 @@ menu button.active {
 }
 
 .mainPageFooter{
-  background: linear-gradient(to bottom, #70cf95, #008c59);
+  background: linear-gradient(to bottom, var(--green-2-color), var(--green-3-color));
   height: 30px;
 }
 
