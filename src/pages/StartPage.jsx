@@ -30,6 +30,7 @@ import { EnvelopeAtFill } from "react-bootstrap-icons";
 import { Linkedin } from "react-bootstrap-icons";
 import { TelephoneFill } from "react-bootstrap-icons";
 import { Github } from "react-bootstrap-icons";
+import ProgressBar from 'react-bootstrap/ProgressBar';
 import {PROJECT_ONE} from "../assets/data/data.js";
 import {PROJECT_TWO} from "../assets/data/data.js";
 import {PROJECT_THREE} from "../assets/data/data.js";
@@ -458,8 +459,20 @@ export default function StartPage() {
           </div>
         </div>
 
-        <footer className={`${StartPageStyles.mainPageFooter} w-100 text-center`}>
-          <a target="_blank" href="https://icons8.com" className={`${StartPageStyles.mainPageFooterText}`}>Icons by Icons8</a>
+        <footer className={`${StartPageStyles.mainPageFooter} w-100 text-end`}>
+          <div className='row justify-content-between'>
+            <div className='col-6 mt-1'>
+              <div className={`${StartPageStyles.mainPageFooterText} px-2`}>
+              ©2024 Bartosz Szarłowicz 
+              </div>
+            </div>
+            <div className='col-6 mt-1 d-flex align-items-center'>
+             <div className={`${StartPageStyles.mainPageFooterText} px-2`}>
+                Credits:
+              </div>
+              <a target="_blank" href="https://icons8.com" className={`${StartPageStyles.mainPageFooterText}`}>Icons by Icons8</a>
+            </div>
+          </div>
         </footer>
       </div>
     );

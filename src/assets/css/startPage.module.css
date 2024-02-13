@@ -327,18 +327,6 @@ li.contacts:hover span {
   animation-delay: 0.4s;
 }
 
-.mainPageFooter{
-  background-color: #008c59;
-  height: 30px;
-}
-
-.mainPageFooterText{
-  color: #a2d8a6;
-  text-decoration: none;
-  font-family: 'Lato-Light', sans-serif;
-  font-size: 14px;
-}
-
 .iconContainer{
   background: linear-gradient(to top right, #a2d8a6, #70cf95, #70cf95, #a2d8a6, #c3debe);
   border-radius: 12px;
@@ -483,6 +471,18 @@ menu button.active {
 
 .iconWrapperDevelopment:hover .developmentTeamPics {
   filter: brightness(50%);
+}
+
+.mainPageFooter{
+  background: linear-gradient(to bottom, #70cf95, #008c59);
+  height: 30px;
+}
+
+.mainPageFooterText{
+  color: #b5ecb8;
+  text-decoration: none;
+  font-family: 'Lato-Light', sans-serif;
+  font-size: 14px;
 }
 
 
