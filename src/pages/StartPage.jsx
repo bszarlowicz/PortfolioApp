@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import startPageStyles from "../assets/css/StartPage.module.css";
+import startPageStyles from "../assets/css/startPage.module.css";
 import angleBracketsImg from "../assets/images/angleBrackets.png";
 import profileImg from "../assets/images/profileImg.png";
 import profileImgAntek from "../assets/images/Antek.png";
