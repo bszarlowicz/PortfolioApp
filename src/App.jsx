@@ -4,6 +4,7 @@ import StartPage from './pages/StartPage'
 
 function App() {
   return (
+    
     <div>
       <BrowserRouter>
         <Routes>
