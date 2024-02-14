@@ -1,4 +1,4 @@
-import StartPageStyles from "../assets/css/StartPage.module.css";
+import StartPageStyles from "../assets/css/startPage.module.css";
 
 export default function TechnologiesCard ({ iconsData }) {
     return (
