@@ -395,7 +395,7 @@ export default function StartPage() {
                 <menu  className='my-0'>
                   <TabButton onSelect={() => handleClickDragAndDropApp('about')} isActive={selectedTopicDragAndDropApp==="about"}>About</TabButton>
                   <TabButton onSelect={() => handleClickDragAndDropApp('goal')} isActive={selectedTopicDragAndDropApp==="goal"}>Goal</TabButton>
-                  <TabButton onSelect={() => handleClickDragAndDropApp('docker')} isActive={selectedTopicDragAndDropApp==="docker"}>Docker config</TabButton>
+                  <TabButton onSelect={() => handleClickDragAndDropApp('docker')} isActive={selectedTopicDragAndDropApp==="docker"}>Docker</TabButton>
                 </menu>
                 <div  className={`${startPageStyles.mainDescriptionText} col-md-12 text-start`}>
                   {PROJECT_FIVE[selectedTopicDragAndDropApp].description}
