@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import StartPageStyles from "../assets/css/StartPage.module.css";
+import startPageStyles from "../assets/css/StartPage.module.css";
 import angleBracketsImg from "../assets/images/angleBrackets.png";
 import profileImg from "../assets/images/profileImg.png";
 import profileImgAntek from "../assets/images/Antek.png";
@@ -142,10 +142,10 @@ export default function StartPage() {
   return (
       <div>
         <div className="row mt-2">
-          <div className={`${StartPageStyles.containerStyle}`}>
-            <img src={profileImg} alt="Profile" className={`${StartPageStyles.profilePic}`}/>
-            <div className={`${StartPageStyles.greenCircleStyle}`}></div>
-            <div className={`${StartPageStyles.spacing} row`}></div>
+          <div className={`${startPageStyles.containerStyle}`}>
+            <img src={profileImg} alt="Profile" className={`${startPageStyles.profilePic}`}/>
+            <div className={`${startPageStyles.greenCircleStyle}`}></div>
+            <div className={`${startPageStyles.spacing} row`}></div>
             <div className="row mx-2">
               <ul>
                   <div className="row">
@@ -170,7 +170,7 @@ export default function StartPage() {
                   </div>
                   <div className="row">
                     <div className="col-auto">
-                      <div onClick={() => handleCopyToClipboard('+48 506 492 177')} className={`${StartPageStyles.contact}`}>
+                      <div onClick={() => handleCopyToClipboard('+48 506 492 177')} className={`${startPageStyles.contact}`}>
                         <ContactLine
                           icon={TelephoneFill}
                           text="+48 506 492 177"
@@ -180,7 +180,7 @@ export default function StartPage() {
                   </div>
                   <div className="row">
                     <div className="col-auto">
-                      <div onClick={() => handleCopyToClipboard('szarlowiczbartosz2311@gmail.com')} className={`${StartPageStyles.contact}`}>
+                      <div onClick={() => handleCopyToClipboard('szarlowiczbartosz2311@gmail.com')} className={`${startPageStyles.contact}`}>
                         <ContactLine
                           icon={EnvelopeAtFill}
                           text="szarlowiczbartosz2311@gmail.com"
@@ -191,11 +191,11 @@ export default function StartPage() {
                 </ul>
               </div>
           </div>
-          <div className={`${StartPageStyles.welcomeTextSection} col-md-10`}>
+          <div className={`${startPageStyles.welcomeTextSection} col-md-10`}>
             <div className="row">
               <div className="col-md-1"></div>
               <div
-                className={`${StartPageStyles.mainHeaderWelcome1} col-auto mx-3`}
+                className={`${startPageStyles.mainHeaderWelcome1} col-auto mx-3`}
               >
                 Welcome,
               </div>
@@ -203,7 +203,7 @@ export default function StartPage() {
             <div className="row">
               <div className="col-md-1"></div>
               <div
-                className={`${StartPageStyles.mainHeaderWelcome2} col-auto mx-3`}
+                className={`${startPageStyles.mainHeaderWelcome2} col-auto mx-3`}
               >
                 I'm Bartosz Szarłowicz
               </div>
@@ -211,19 +211,19 @@ export default function StartPage() {
             <div className="row">
               <div className="col-md-1"></div>
               <div
-                className={`${StartPageStyles.mainHeader} col-auto mx-3`}
+                className={`${startPageStyles.mainHeader} col-auto mx-3`}
               >
                 Fullstack Developer
                 <Stamps3D
                   img={angleBracketsImg}
                   altText="Curly Braces"
-                  customClassName={`${StartPageStyles.customImg} ${StartPageStyles.delayedAnimation2}`}
+                  customClassName={`${startPageStyles.customImg} ${startPageStyles.delayedAnimation2}`}
                 />
               </div>
             <div className="row">
               <div className="col-md-1"></div>
               <div
-                className={`${StartPageStyles.mainHeaderDescription} col `}
+                className={`${startPageStyles.mainHeaderDescription} col `}
               >
                 I'm a dedicated web developer with six months of hands-on commercial experience. My journey in the world of web development began with a passion for clean and efficient code.
               </div>
@@ -241,11 +241,11 @@ export default function StartPage() {
               duration={500}
             >
               <ChevronCompactDown
-                className={`${StartPageStyles.bouncingIcon} ${StartPageStyles.customArrow}`}
+                className={`${startPageStyles.bouncingIcon} ${startPageStyles.customArrow}`}
               />
               <div className="row">
                 <div className="col-md-12">
-                  <span className={`${StartPageStyles.arrrowDescription}`}>Check out my work</span>
+                  <span className={`${startPageStyles.arrrowDescription}`}>Check out my work</span>
                 </div>
               </div>
             </Link>
@@ -253,106 +253,106 @@ export default function StartPage() {
         </div>
         <div id="MyProjects">
           <div id="TrychologistApp">
-            <div className={`${StartPageStyles.bottomSectionFirst}`}>
+            <div className={`${startPageStyles.bottomSectionFirst}`}>
               <ProjectTitle
                 projectName= "Trichologist app"
                 projectShortDescription= "Users data - collection/processing/export"
               />
               <div className="row">
-                <div className={`${StartPageStyles.picColumn} col-md-8`}>
+                <div className={`${startPageStyles.picColumn} col-md-8`}>
                   <ProjectPicture 
                     src={trichologist_final}
-                    customClassName={`${StartPageStyles.projectPic}`}
+                    customClassName={`${startPageStyles.projectPic}`}
                   />
                 </div>
-                <div className={`${StartPageStyles.projectIconArea} col-auto my-auto`}>
+                <div className={`${startPageStyles.projectIconArea} col-auto my-auto`}>
                 <TechnologiesCard
                     iconsData={TrichologistIconsData}
                   />
                 </div>
               </div>
             </div>
-            <div className={`${StartPageStyles.mainDescriptionArea} row`}>
-              <div id="descriptionTrychologist" className={`${StartPageStyles.descriptionSection} col-md-6`}>
+            <div className={`${startPageStyles.mainDescriptionArea} row`}>
+              <div id="descriptionTrychologist" className={`${startPageStyles.descriptionSection} col-md-6`}>
                 <menu className='my-0'>
                   <TabButton onSelect={() => handleClickTrichologist('about')} isActive={selectedTopicTrichologist==="about"}>About</TabButton>
                   <TabButton onSelect={() => handleClickTrichologist('goal')} isActive={selectedTopicTrichologist==="goal"}>Goal</TabButton>
                 </menu>
-                <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+                <div  className={`${startPageStyles.mainDescriptionText} col-md-12 text-start`}>
                   {PROJECT_ONE[selectedTopicTrichologist].description}
                 </div>
               </div>
             </div>
-            <div className={`${StartPageStyles.mainDescriptionAreaEndTrichologist}`}></div>
+            <div className={`${startPageStyles.mainDescriptionAreaEndTrichologist}`}></div>
           </div>
 
           <div id="RegionHub">
-            <div className={`${StartPageStyles.bottomSectionBackgroundRegionHub}`}>
+            <div className={`${startPageStyles.bottomSectionBackgroundRegionHub}`}>
               <ProjectTitle
                 projectName= "RegionHub"
                 projectShortDescription= "Demographic data of regions in Poland and the USA - extensive database with analysis"
               />
               <div className="row">
-                <div className={`${StartPageStyles.picColumn} col-md-8`}>
+                <div className={`${startPageStyles.picColumn} col-md-8`}>
                   <ProjectPicture 
                     src={RegionHub_final}
-                    customClassName={`${StartPageStyles.projectPic}`}
+                    customClassName={`${startPageStyles.projectPic}`}
                   />
                 </div>
-                <div className={`${StartPageStyles.projectIconArea} col-auto my-auto`}>
+                <div className={`${startPageStyles.projectIconArea} col-auto my-auto`}>
                 <TechnologiesCard
                     iconsData={RegionHubIconsData}
                   />
                 </div>
               </div>
             </div>
-            <div className={`${StartPageStyles.mainDescriptionArea} row`}>
-              <div id="descriptionRegionHub" className={`${StartPageStyles.descriptionSection} col-md-6`}>
+            <div className={`${startPageStyles.mainDescriptionArea} row`}>
+              <div id="descriptionRegionHub" className={`${startPageStyles.descriptionSection} col-md-6`}>
                 <menu  className='my-0'>
                   <TabButton onSelect={() => handleClickRegionHub('about')} isActive={selectedTopicRegionHub==="about"}>About</TabButton>
                   <TabButton onSelect={() => handleClickRegionHub('goal')} isActive={selectedTopicRegionHub==="goal"}>Goal</TabButton>
                   <TabButton onSelect={() => handleClickRegionHub('algorithm')} isActive={selectedTopicRegionHub==="algorithm"}>Algorithm</TabButton>
                 </menu>
-                <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+                <div  className={`${startPageStyles.mainDescriptionText} col-md-12 text-start`}>
                   {PROJECT_TWO[selectedTopicRegionHub].description}
                 </div>
               </div>
             </div>
-            <div className={`${StartPageStyles.mainDescriptionAreaEndRegionHub}`}></div>
+            <div className={`${startPageStyles.mainDescriptionAreaEndRegionHub}`}></div>
           </div>
 
           <div id="DeliveryApp">
-            <div className={`${StartPageStyles.bottomSectionBackgroundDeliveryApp}`}>
+            <div className={`${startPageStyles.bottomSectionBackgroundDeliveryApp}`}>
               <ProjectTitle
                 projectName= "Delivery app"
                 projectShortDescription= "Software for a delivery company - handling shipments (customer/courier/admin)"
               />
               <div className="row">
-                <div className={`${StartPageStyles.picColumn} col-md-8`}>
+                <div className={`${startPageStyles.picColumn} col-md-8`}>
                   <ProjectPicture 
                     src={delivery_final}
-                    customClassName={`${StartPageStyles.projectPic}`}
+                    customClassName={`${startPageStyles.projectPic}`}
                   />
                 </div>
-                <div className={`${StartPageStyles.projectIconArea} col-auto my-auto`}>
+                <div className={`${startPageStyles.projectIconArea} col-auto my-auto`}>
                 <TechnologiesCard
                     iconsData={DeliveryAppIconsData}
                   />
                 </div>
               </div>
             </div>
-            <div className={`${StartPageStyles.mainDescriptionArea} row`}>
-              <div id="descriptionDeliveryApp" className={`${StartPageStyles.descriptionSection} col-md-6`}>
+            <div className={`${startPageStyles.mainDescriptionArea} row`}>
+              <div id="descriptionDeliveryApp" className={`${startPageStyles.descriptionSection} col-md-6`}>
                 <menu  className='my-0'>
                   <TabButton onSelect={() => handleClickDeliveryApp('about')} isActive={selectedTopicDeliveryApp==="about"}>About</TabButton>
                   <TabButton onSelect={() => handleClickDeliveryApp('goal')} isActive={selectedTopicDeliveryApp==="goal"}>Goal</TabButton>
                   <TabButton onSelect={() => handleClickDeliveryApp('purpose')} isActive={selectedTopicDeliveryApp==="purpose"}>Purpose</TabButton>
                 </menu>
-                <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+                <div  className={`${startPageStyles.mainDescriptionText} col-md-12 text-start`}>
                   {PROJECT_THREE[selectedTopicDeliveryApp].description}
                 </div>
               </div>
-              <div className={`${StartPageStyles.developmentTeamHeader} col-auto mx-auto text-center`}>
+              <div className={`${startPageStyles.developmentTeamHeader} col-auto mx-auto text-center`}>
                 <DevelopmentTeam
                   developmentTeamData={DeliveryAppDevelopmentTeamData}
                   githubIcon={whiteLinkedInIcon}
@@ -367,41 +367,41 @@ export default function StartPage() {
                 />
               </div>
             </div>
-            <div className={`${StartPageStyles.mainDescriptionAreaEndDeliveryApp}`}></div>
+            <div className={`${startPageStyles.mainDescriptionAreaEndDeliveryApp}`}></div>
           </div>
 
           <div id="DragAndDropApp">
-            <div className={`${StartPageStyles.bottomSectionBackgroundDragAndDropApp}`}>
+            <div className={`${startPageStyles.bottomSectionBackgroundDragAndDropApp}`}>
               <ProjectTitle
                 projectName= "Sentence Puzzle"
                 projectShortDescription= "HTML Drag and Drop API implementation - composing random words using the drag and drop method"
               />
               <div className="row">
-                <div className={`${StartPageStyles.picColumn} col-md-8`}>
+                <div className={`${startPageStyles.picColumn} col-md-8`}>
                   <ProjectPicture 
                     src={dragAndDrop_final}
-                    customClassName={`${StartPageStyles.projectPic}`}
+                    customClassName={`${startPageStyles.projectPic}`}
                   />
                 </div>
-                <div className={`${StartPageStyles.projectIconArea} col-auto my-auto`}>
+                <div className={`${startPageStyles.projectIconArea} col-auto my-auto`}>
                 <TechnologiesCard
                     iconsData={DragAndDropData}
                   />
                 </div>
               </div>
             </div>
-            <div className={`${StartPageStyles.mainDescriptionArea} row`}>
-              <div id="descriptionDragAndDropApp" className={`${StartPageStyles.descriptionSection} col-md-6`}>
+            <div className={`${startPageStyles.mainDescriptionArea} row`}>
+              <div id="descriptionDragAndDropApp" className={`${startPageStyles.descriptionSection} col-md-6`}>
                 <menu  className='my-0'>
                   <TabButton onSelect={() => handleClickDragAndDropApp('about')} isActive={selectedTopicDragAndDropApp==="about"}>About</TabButton>
                   <TabButton onSelect={() => handleClickDragAndDropApp('goal')} isActive={selectedTopicDragAndDropApp==="goal"}>Goal</TabButton>
-                  <TabButton onSelect={() => handleClickDragAndDropApp('docker')} isActive={selectedTopicDragAndDropApp==="docker"}>Docker</TabButton>
+                  <TabButton onSelect={() => handleClickDragAndDropApp('docker')} isActive={selectedTopicDragAndDropApp==="docker"}>Docker config</TabButton>
                 </menu>
-                <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+                <div  className={`${startPageStyles.mainDescriptionText} col-md-12 text-start`}>
                   {PROJECT_FIVE[selectedTopicDragAndDropApp].description}
                 </div>
               </div>
-              <div className={`${StartPageStyles.developmentTeamHeader} col-auto mx-auto text-center w-25 pt-5 mt-3`}>
+              <div className={`${startPageStyles.developmentTeamHeader} col-auto mx-auto text-center w-25 pt-5 mt-3`}>
               <ProjectLinks
                   firstLink="https://github.com/bszarlowicz/Rails7-DragAndDrop-Docker"
                   secondLink={demoDragAndDrop}
@@ -412,39 +412,39 @@ export default function StartPage() {
                 />
               </div>
             </div>
-            <div className={`${StartPageStyles.mainDescriptionAreaEndDragAndDropApp}`}></div>
+            <div className={`${startPageStyles.mainDescriptionAreaEndDragAndDropApp}`}></div>
           </div>
 
           <div id="PomodoroApp">
-            <div className={`${StartPageStyles.bottomSectionBackgroundRegionHub}`}>
+            <div className={`${startPageStyles.bottomSectionBackgroundRegionHub}`}>
               <ProjectTitle
                 projectName= "Pomodoro clock"
                 projectShortDescription= "An application for measuring working time - effective work with the pomodoro technique"
               />
               <div className="row">
-                <div className={`${StartPageStyles.picColumn} col-md-8`}>
+                <div className={`${startPageStyles.picColumn} col-md-8`}>
                   <ProjectPicture 
                     src={pomodoroApp_final}
-                    customClassName={`${StartPageStyles.projectPic}`}
+                    customClassName={`${startPageStyles.projectPic}`}
                   />
                 </div>
-                <div className={`${StartPageStyles.projectIconArea} col-auto my-auto`}>
+                <div className={`${startPageStyles.projectIconArea} col-auto my-auto`}>
                 <TechnologiesCard
                     iconsData={PomodoroAppIconsData}
                   />
                 </div>
               </div>
             </div>
-            <div className={`${StartPageStyles.mainDescriptionArea} row`}>
-              <div id="descriptionPomodoroApp" className={`${StartPageStyles.descriptionSection} col-md-6`}>
+            <div className={`${startPageStyles.mainDescriptionArea} row`}>
+              <div id="descriptionPomodoroApp" className={`${startPageStyles.descriptionSection} col-md-6`}>
                 <menu  className='my-0'>
                   <TabButton onSelect={() => handleClickPomodoroApp('about')} isActive={selectedTopicPomodoroApp==="about"}>About</TabButton>
                 </menu>
-                <div  className={`${StartPageStyles.mainDescriptionText} col-md-12 text-start`}>
+                <div  className={`${startPageStyles.mainDescriptionText} col-md-12 text-start`}>
                   {PROJECT_FOUR[selectedTopicPomodoroApp].description}
                 </div>
               </div>
-              <div className={`${StartPageStyles.developmentTeamHeader} col-auto mx-auto text-center w-25 pt-5 mt-3`}>
+              <div className={`${startPageStyles.developmentTeamHeader} col-auto mx-auto text-center w-25 pt-5 mt-3`}>
               <ProjectLinks
                   firstLink="https://github.com/bszarlowicz/pomodoro-techinque-webiste"
                   secondLink="https://pomodoro-technique-bszarlowicz.netlify.app"
@@ -455,22 +455,22 @@ export default function StartPage() {
                 />
               </div>
             </div>
-            <div className={`${StartPageStyles.mainDescriptionAreaEndRegionHub}`}></div>
+            <div className={`${startPageStyles.mainDescriptionAreaEndRegionHub}`}></div>
           </div>
         </div>
 
-        <footer className={`${StartPageStyles.mainPageFooter} w-100 text-end`}>
+        <footer className={`${startPageStyles.mainPageFooter} w-100 text-end`}>
           <div className='row justify-content-between'>
             <div className='col-6 mt-1'>
-              <div className={`${StartPageStyles.mainPageFooterText} px-2`}>
+              <div className={`${startPageStyles.mainPageFooterText} px-2`}>
               ©2024 Bartosz Szarłowicz 
               </div>
             </div>
             <div className='col-6 mt-1 d-flex align-items-center'>
-             <div className={`${StartPageStyles.mainPageFooterText} px-2`}>
+             <div className={`${startPageStyles.mainPageFooterText} px-2`}>
                 Credits:
               </div>
-              <a target="_blank" href="https://icons8.com" className={`${StartPageStyles.mainPageFooterText}`}>Icons by Icons8</a>
+              <a target="_blank" href="https://icons8.com" className={`${startPageStyles.mainPageFooterText}`}>Icons by Icons8</a>
             </div>
           </div>
         </footer>
