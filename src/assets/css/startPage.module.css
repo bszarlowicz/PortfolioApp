@@ -634,10 +634,98 @@ menu button.active {
     margin-left: auto;
     margin-right: auto;
   }
+
   .descriptionSection{
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+@media only screen and (max-width: 760px) {
+
+  .body{
+    overflow-x: hidden;
+  }
+
+  .spacing{
+    height: 5vh;
+  }
+
+  .welcomeTextSection{
+    margin-top: 1vh;
+  }
+
+  .mainHeader{
+    font-size: 40px;
+  }
+
+  .customImg{
+    margin-right: 30px;
+  }
+
+  .mainHeaderDescription{
+    font-size: 16px;
+  }
+  
+  .bottomSectionFirst{
+    margin-top: 20vh;
+  }
+
+  .projectTitle{
+    font-size: 25px;
+    margin-right: auto;
+  }
+
+  .greenDotProjects{
+    margin-left: 0;
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projectSubTitle{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  menu button {
+    font-size: 21px;
+
+  }
+
+  .descriptionSection{
+    max-width: 90vw;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .iconContainer{
+    margin-bottom: 5vh;
+  }
+
+  .mainDescriptionAreaEndTrichologist{
+    height: 13vh;
+  }
+
+  .mainDescriptionAreaEndRegionHub{
+    min-height: 13vh;
+  }
+
+  .mainDescriptionAreaEndDeliveryApp{
+    min-height: 13vh;
+  }
+
+  .mainDescriptionAreaEndDragAndDropApp{
+    min-height: 13vh;
+  }
+
+  .developmentTeamHeader{
+    width: 100% !important;
+  }
+
 
 }
 
