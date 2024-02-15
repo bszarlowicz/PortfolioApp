@@ -2,7 +2,7 @@ import StartPageStyles from "../assets/css/startPage.module.css";
 
 export default function TechnologiesCard ({ iconsData }) {
     return (
-      <div className={`${StartPageStyles.iconContainer}`}>
+      <div className={`${StartPageStyles.iconContainer} p-2`}>
         <div className="row">
           <div className="col-md-12 py-2">
             Technologies
@@ -10,7 +10,7 @@ export default function TechnologiesCard ({ iconsData }) {
         </div>
         <div className="row">
           {iconsData.map((icon, index) => (
-            <div key={index} className={`${StartPageStyles.iconWrapper} col-md-3 mx-auto`}>
+            <div key={index} className={`${StartPageStyles.iconWrapper} col-3 mx-auto`}>
               <img
                 src={icon.path}
                 className={`${StartPageStyles.trichologistDescriptionIcon}`}
