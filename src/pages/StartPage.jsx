@@ -140,7 +140,7 @@ export default function StartPage() {
   ];
   
   return (
-      <div>
+      <div className={`${startPageStyles.contentWrapper}`}>
         <div className="row mt-2">
           <div className={`${startPageStyles.containerStyle}`}>
             <img src={profileImg} alt="Profile" className={`${startPageStyles.profilePic}`}/>

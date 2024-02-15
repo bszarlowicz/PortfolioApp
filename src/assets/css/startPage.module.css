@@ -643,8 +643,10 @@ menu button.active {
 
 @media only screen and (max-width: 760px) {
 
-  .body{
+  .contentWrapper{
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
 
   .spacing{
@@ -669,6 +671,11 @@ menu button.active {
   
   .bottomSectionFirst{
     margin-top: 20vh;
+    width: 100%;
+  }
+
+  .bottomSectionBackgroundDragAndDropApp{
+    width: 100%;
   }
 
   .projectTitle{
@@ -688,6 +695,10 @@ menu button.active {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+  }
+
+  .projectIconArea{
+    width: 75%;
   }
 
   menu button {
