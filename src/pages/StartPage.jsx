@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import startPageStyles from "../assets/css/startPage.module.css";
 import angleBracketsImg from "../assets/images/angleBrackets.png";
-import profileImg from "../assets/images/profileImg.png";
+import profileImg from "../assets/images/profileImg.jpg";
 import profileImgAntek from "../assets/images/Antek.png";
 import profileImgMaciek from "../assets/images/Maciek.jpg";
 import trichologist_final from "../assets/images/trycholog_final.png";
@@ -225,7 +225,7 @@ export default function StartPage() {
               <div
                 className={`${startPageStyles.mainHeaderDescription} col `}
               >
-                I'm a dedicated web developer with six months of hands-on commercial experience. My journey in the world of web development began with a passion for clean and efficient code.
+                I am a dedicated web developer with one and a half years of commercial experience. My journey in the world of web development began with a passion for clean and efficient code.
               </div>
               <div className="col-md-4"></div>
             </div>

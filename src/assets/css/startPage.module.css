@@ -175,10 +175,12 @@ height: 24vh;
 }
 
 .profilePic{
-width: 100px;
-height: 100px;
-border-radius: 41% 59% 54% 46% / 36% 48% 52% 64%;
-margin-left: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 41% 59% 54% 46% / 36% 48% 52% 64%;
+  margin-left: 10px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .profilePicAntek{
