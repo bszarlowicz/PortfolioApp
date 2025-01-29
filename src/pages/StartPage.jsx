@@ -168,7 +168,7 @@ export default function StartPage() {
                       </a>
                     </div>
                   </div>
-                  <div className="row">
+                  {/* <div className="row">
                     <div className="col-auto">
                       <div onClick={() => handleCopyToClipboard('+48 506 492 177')} className={`${startPageStyles.contact}`}>
                         <ContactLine
@@ -177,13 +177,13 @@ export default function StartPage() {
                         />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="row">
                     <div className="col-auto">
                       <div onClick={() => handleCopyToClipboard('szarlowiczbartosz2311@gmail.com')} className={`${startPageStyles.contact}`}>
                         <ContactLine
                           icon={EnvelopeAtFill}
-                          text="szarlowiczbartosz2311@gmail.com"
+                          text="Send me an email!"
                         />
                       </div>
                     </div>
@@ -213,7 +213,7 @@ export default function StartPage() {
               <div
                 className={`${startPageStyles.mainHeader} col-auto mx-3`}
               >
-                Fullstack Developer
+                Full Stack Web Developer
                 <Stamps3D
                   img={angleBracketsImg}
                   altText="Curly Braces"
@@ -463,7 +463,7 @@ export default function StartPage() {
           <div className='row justify-content-between'>
             <div className='col-6 mt-1'>
               <div className={`${startPageStyles.mainPageFooterText} px-2`}>
-              ©2024 Bartosz Szarłowicz 
+              ©2025 Bartosz Szarłowicz 
               </div>
             </div>
             <div className='col-6 mt-1 d-flex align-items-center'>
